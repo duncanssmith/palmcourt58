@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/menus', 'MenusController@index')->name('menus');
+
+Route::resource('menus', 'MenusController');
