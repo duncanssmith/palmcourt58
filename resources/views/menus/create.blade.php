@@ -4,23 +4,25 @@
     <div class="content">
         <div class="">
             <h1 class="title">
-            Menu create
+                Menu create
             </h1>
         </div>
+
         <form method="POST" action="/menus">
-
             @csrf
-
-            <div>
+            <div class="form-group">
+                {{--<input type="file" name="upload" placeholder="upload an image file">--}}
+                <input type="file" name="upload" class="btn btn-success" placeholder="Upload image">
+                <p>Note: max file size 4MB</p>
+            </div>
+            <div class="form-group">
                 <input type="text" name="title" placeholder="title" value="{{old('title')}}">
             </div>
-
-            <div>
-                <input type="text" name="description" placeholder="description" value="{{old('description')}}">
+            <div class="form-group">
+                <textarea name="description" placeholder="description" value="{{old('description')}}"></textarea>
             </div>
-
-            <div>
-                <button type="submit">Create menu</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-info">Create menu</button>
             </div>
 
             @if ($errors->any())

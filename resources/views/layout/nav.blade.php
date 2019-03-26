@@ -23,6 +23,21 @@
                     <li><a href="/#section-views">Views</a></li>
                     <li><a href="/#section-functions">Functions</a></li>
                     <li><a href="/#section-about">About us</a></li>
+
+                    @if(auth())
+                        <li><a href="/menus">Menus</a></li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-header pull-right">
+            <div class="nav navbar-nav">
+                <ul class="nav navbar-nav">
+                    <li class="pull-right hidden-login-link">
+                        <a href="/login">
+                            <i class="fa fa-key"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
