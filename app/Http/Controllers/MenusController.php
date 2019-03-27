@@ -55,27 +55,46 @@ class MenusController extends Controller
      */
     public function store()
     {
-        Menu::create(
-            request()->validate(
-                [
-                    'title' => ['required'],
-                    'description' => [],
-//                    'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
-                ]
-            )
-        );
+//          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
 
         $menu = Menu::latest()->first();
 
-        $image = time().'.'.request()->image->getClientOrOriginalExtension();
-        request()->image->move(public_path('images'), $image);
+        if (request()->hasFile('menuImage')) {
+            if (request()->file('menuImage')->isValid()) {
+                Menu::create(
+                    request()->validate(
+                        [
+                            'title' => ['required'],
+                            'description' => [],
+                        ]
+                    )
+                );
 
-        // Try to upload the photo
-//        $origin = getEnv('PUBLIC_BASE_PATH').'uploads/works/';
-//        $target = getEnv('PUBLIC_BASE_PATH').'media/images/';
-//        $action = 'store';
-//        dd(request());
-//        $this->file_upload_image(request()->allFiles('image'), $menu, $origin, $target, $action);
+                $file = request()->menuImage;
+                $path = request()->menuImage->path();
+                $extension = request()->menuImage->extension();
+
+                // name the ref field after the menu id
+                $ref = sprintf("%04d", $menu->id);
+
+                // Try to upload the photo
+                $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
+
+                $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
+                $action = 'store';
+
+                $file->move($destinationPath, $ref.'-'.$extension);
+                $file->move($targetPath.'/'.$ref.$extension);
+                dd($file, $path, $ref, $extension);
+            }
+        } else {
+            return redirect('/menu/create')->withErrors();
+            dd("error...");
+        }
+
+//        $file = time().'.'.request()->menuImage->getClientOrOriginalExtension();
+//        request()->menuImage->move(public_path('images'), $file);
+//        $this->saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action);
 
         return redirect('/menus');
     }
@@ -145,14 +164,20 @@ class MenusController extends Controller
     /**
      *
      */
-    public function file_upload_image($photo, $menu, $origin, $target)
+    public function saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action)
     {
         // name the ref field after the menu id
         $ref = sprintf("%04d", $menu->id);
 
-        $photo->move($origin, $menu->id);
+        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
+
+        $file->move($file->pathname, $origin);
+
+        dd($origin);
 
         $target = $origin.$menu->id;
+
+        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
 
 //        $canvas = Image::canvas(640, 640, '#ffffff');
 //        $layer = Image::make($target);

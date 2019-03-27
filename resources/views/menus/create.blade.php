@@ -4,16 +4,14 @@
     <div class="content">
         <div class="">
             <h1 class="title">
-                Menu create
+                Create Menu
             </h1>
         </div>
 
-        <form method="POST" action="/menus">
+        <form method="POST" action="/menus" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                {{--<input type="file" name="upload" placeholder="upload an image file">--}}
-                <input type="file" name="upload" class="btn btn-success" placeholder="Upload image">
-                <p>Note: max file size 4MB</p>
+                @include('layout.image_upload_field')
             </div>
             <div class="form-group">
                 <input type="text" name="title" placeholder="title" value="{{old('title')}}">

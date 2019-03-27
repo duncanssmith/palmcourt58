@@ -5,19 +5,18 @@
     <div class="content">
         <div class="">
             <h1 class="title">
-                Menu edit
+                Edit Menu
             </h1>
         </div>
 
-        <form method="POST" action="/menus/{{ $menu->id }}">
+        <form method="POST" action="/menus/{{ $menu->id }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
 
             <div class="form-group">
-                {{--<input type="file" name="upload" placeholder="upload an image file">--}}
-                <input type="file" name="upload" class="btn btn-success" placeholder="Upload image">
-                <p>Note: max file size 4MB</p>
+                @include('layout.image_upload_field')
             </div>
+
             <div class="form-group">
                 <input type="text" name="title" placeholder="title" value="{{ $menu->title }}">
             </div>
