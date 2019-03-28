@@ -10,15 +10,32 @@
 
         <form method="POST" action="/menus" enctype="multipart/form-data">
             @csrf
+
             <div class="form-group">
                 @include('layout.image_upload_field')
             </div>
+
+            <div class="form-group">
+                <input type="text" name="reference" placeholder="reference" value="{{ old('reference') }}" disabled>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="extension" placeholder="extension" value="{{ old('extension') }}" disabled>
+            </div>
+
             <div class="form-group">
                 <input type="text" name="title" placeholder="title" value="{{old('title')}}">
             </div>
+
             <div class="form-group">
                 <textarea name="description" placeholder="description" value="{{old('description')}}"></textarea>
             </div>
+
+            <div class="form-group">
+                <label for="active">Is active?</label>
+                <input type="checkbox" name="active" placeholder="active" value="{{ old('active') }}">
+            </div>
+
             <div class="form-group">
                 <button type="submit" class="btn btn-info">Create menu</button>
             </div>

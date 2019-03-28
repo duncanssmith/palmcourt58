@@ -56,36 +56,41 @@ class MenusController extends Controller
     public function store()
     {
 //          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
-
-        $menu = Menu::latest()->first();
-
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
-                Menu::create(
-                    request()->validate(
+//                Menu::create(
+                if (request()->validate(
                         [
                             'title' => ['required'],
                             'description' => [],
                         ]
                     )
-                );
+                ) {
+                    $menu = new Menu();
+                    $menu->title = request('title');
+                    $menu->description = request('description');
+                    $menu->active = request('active') ? 1 : 0;
+                    $menu->save();
+                }
+
+                $menu = Menu::latest()->first();
 
                 $file = request()->menuImage;
                 $path = request()->menuImage->path();
                 $extension = request()->menuImage->extension();
 
-                // name the ref field after the menu id
-                $ref = sprintf("%04d", $menu->id);
+                // set the ref to the menu id
+                $reference = sprintf("%04d", $menu->id);
+                $menu->reference = $reference;
+                $menu->extension = $extension;
+                $menu->save();
 
                 // Try to upload the photo
                 $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
-
                 $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
                 $action = 'store';
 
-                $file->move($destinationPath, $ref.'-'.$extension);
-                $file->move($targetPath.'/'.$ref.$extension);
-                dd($file, $path, $ref, $extension);
+                $file->move($destinationPath, $reference.'.'.$extension);
             }
         } else {
             return redirect('/menu/create')->withErrors();
