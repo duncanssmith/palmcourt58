@@ -22,7 +22,7 @@
             </div>
 
             <div class="form-group">
-                <input type="text" name="reference" placeholder="reference" value="{{ $menu->reference }}">
+                <input type="text" name="path" placeholder="path" value="{{ $menu->path }}">
             </div>
 
             <div class="form-group">

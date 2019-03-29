@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th>Image</th>
-                    <th>Reference</th>
+                    <th>Path</th>
                     <th>Extension</th>
                     <th>Title</th>
                     <th>Description</th>
@@ -26,13 +26,13 @@
                     <tr>
                         <td>
                             <a href="/menus/{{ $menu->id }}">
-                                <embed src="uploads/menus/0001.pdf#page=1%toolbar=0&navpanes=0&scrollbar=1&view=fit"
+                                <embed src="{{ $menu->path }}%toolbar=0&navpanes=0&scrollbar=1&view=fit"
                                        type="application/pdf"
                                        width="50%" height="200px"
                                 />
                             </a>
                         </td>
-                        <td>{{ $menu->reference }}</td>
+                        <td>{{ $menu->path }}</td>
                         <td>{{ $menu->extension }}</td>
                         <td>{{ $menu->title }}</td>
                         <td>{{ $menu->description }}</td>

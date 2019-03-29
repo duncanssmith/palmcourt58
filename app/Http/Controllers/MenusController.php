@@ -6,6 +6,7 @@ use App\Menu;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * The Menus controller
@@ -58,43 +59,46 @@ class MenusController extends Controller
 //          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
+
+                $filePath = "uploads/menus";
+
+                $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
+                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
+                $fileUrlLocal = asset($storageLocal);
+                $fileUrlPublic = asset($storagePublic);
+
+//                dd($storageLocal, $storagePublic, $fileUrlLocal, $fileUrlPublic);
+
 //                Menu::create(
-                if (request()->validate(
-                        [
-                            'title' => ['required'],
-                            'description' => [],
-                        ]
-                    )
-                ) {
+                if ((request()->validate(
+                            [
+                                'title' => ['required'],
+                                'description' => [],
+                            ]
+                        )
+                    )) {
                     $menu = new Menu();
                     $menu->title = request('title');
+                    $menu->path = $storageLocal;
+                    $menu->extension = request()->menuImage->extension();
                     $menu->description = request('description');
-                    $menu->active = request('active') ? 1 : 0;
+                    $menu->active = !empty(request('active')) ? 1 : 0;
                     $menu->save();
                 }
 
-                $menu = Menu::latest()->first();
+//                $menu = Menu::latest()->first();
 
-                $file = request()->menuImage;
-                $path = request()->menuImage->path();
-                $extension = request()->menuImage->extension();
-
-                // set the ref to the menu id
-                $reference = sprintf("%04d", $menu->id);
-                $menu->reference = $reference;
-                $menu->extension = $extension;
-                $menu->save();
+//                $menu->save();
 
                 // Try to upload the photo
-                $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
-                $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
-                $action = 'store';
+//                $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
+//                $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
+//                $action = 'store';
 
-                $file->move($destinationPath, $reference.'.'.$extension);
+//                $file->move($destinationPath, $reference.'.'.$extension);
             }
         } else {
             return redirect('/menu/create')->withErrors();
-            dd("error...");
         }
 
 //        $file = time().'.'.request()->menuImage->getClientOrOriginalExtension();

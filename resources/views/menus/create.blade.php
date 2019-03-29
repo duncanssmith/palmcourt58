@@ -16,7 +16,7 @@
             </div>
 
             <div class="form-group">
-                <input type="text" name="reference" placeholder="reference" value="{{ old('reference') }}" disabled>
+                <input type="text" name="path" placeholder="path" value="{{ old('path') }}" disabled>
             </div>
 
             <div class="form-group">
