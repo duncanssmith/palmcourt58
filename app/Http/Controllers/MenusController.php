@@ -56,7 +56,7 @@ class MenusController extends Controller
      */
     public function store()
     {
-//          'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
+        //  'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
 
