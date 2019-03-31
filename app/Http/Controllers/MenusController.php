@@ -19,11 +19,14 @@ use Illuminate\Support\Facades\Storage;
  */
 class MenusController extends Controller
 {
+    /**
+     * Constructor
+     */
     public function __construct()
     {
-//        $this->middleware('auth')->only(['show', 'create', 'edit', 'store', 'update', 'destroy']);
+        //  $this->middleware('auth')->only(['show', 'create', 'edit', 'store', 'update', 'destroy']);
         $this->middleware('auth');
-//        $this->middleware('auth')->except(['index']);
+        // $this->middleware('auth')->except(['index']);
     }
 
 
@@ -67,16 +70,16 @@ class MenusController extends Controller
                 $fileUrlLocal = asset($storageLocal);
                 $fileUrlPublic = asset($storagePublic);
 
-//                dd($storageLocal, $storagePublic, $fileUrlLocal, $fileUrlPublic);
+                //  dd($storageLocal, $storagePublic, $fileUrlLocal, $fileUrlPublic);
 
-//                Menu::create(
+                //  Menu::create(
                 if ((request()->validate(
-                            [
-                                'title' => ['required'],
-                                'description' => [],
-                            ]
-                        )
-                    )) {
+                    [
+                        'title' => ['required'],
+                        'description' => [],
+                    ]
+                ))
+                ) {
                     $menu = new Menu();
                     $menu->title = request('title');
                     $menu->path = $storageLocal;
@@ -86,24 +89,24 @@ class MenusController extends Controller
                     $menu->save();
                 }
 
-//                $menu = Menu::latest()->first();
+                //  $menu = Menu::latest()->first();
 
-//                $menu->save();
+                //  $menu->save();
 
                 // Try to upload the photo
-//                $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
-//                $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
-//                $action = 'store';
+                //  $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
+                //  $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
+                //  $action = 'store';
 
-//                $file->move($destinationPath, $reference.'.'.$extension);
+                //  $file->move($destinationPath, $reference.'.'.$extension);
             }
         } else {
             return redirect('/menu/create')->withErrors();
         }
 
-//        $file = time().'.'.request()->menuImage->getClientOrOriginalExtension();
-//        request()->menuImage->move(public_path('images'), $file);
-//        $this->saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action);
+        // $file = time().'.'.request()->menuImage->getClientOrOriginalExtension();
+        // request()->menuImage->move(public_path('images'), $file);
+        // $this->saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action);
 
         return redirect('/menus');
     }
@@ -136,7 +139,7 @@ class MenusController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request The request object
-     * @param Menu $menu The menu
+     * @param Menu                     $menu    The menu
      *
      * @return \Illuminate\Http\Response
      */
@@ -161,7 +164,7 @@ class MenusController extends Controller
      *
      * @return \Illuminate\Http\Response
      *
-     * @throws
+     * @throws Error $e
      */
     public function destroy(Menu $menu)
     {
@@ -171,7 +174,16 @@ class MenusController extends Controller
     }
 
     /**
+     * Upload file manipulation function not used
      *
+     * @param $menu
+     * @param $file
+     * @param $file
+     * @param $file
+     * @param $file
+     * @param $file
+     *
+     * @return
      */
     public function saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action)
     {
