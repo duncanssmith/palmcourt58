@@ -12,6 +12,14 @@
             @csrf
             @method('PATCH')
 
+            @if ($menu->extension == 'pdf')
+                <embed src="../storage/{{ $menu->path }}?page=1&toolbar=0&navpanes=0&scrollbar=1&view=fit"
+                    type="application/pdf"
+                    width="40%" height="400px"/>
+            @else
+                <img src="../storage/{{ $menu->path }}" width="10%"/>
+            @endif
+
             <div class="form-group">
                 <input type="checkbox" name="active" placeholder="active" value="true">
             </div>

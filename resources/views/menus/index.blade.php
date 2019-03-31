@@ -27,7 +27,8 @@
                         <td>
                             <a href="/menus/{{ $menu->id }}">
                                 @if ($menu->extension == 'pdf')
-                                    <embed src="../storage/{{ $menu->path }}?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit"
+                                    <embed src="../storage/{{ $menu->path }}"
+                                        {{-- ?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit" --}}
                                         type="application/pdf"
                                         width="30%" height="200px"/>
                                 @else
