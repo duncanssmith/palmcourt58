@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
+Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('menus', 'MenusController');

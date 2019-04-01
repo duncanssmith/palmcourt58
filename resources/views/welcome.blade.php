@@ -57,95 +57,102 @@
                     </div>
                     <div class="row middle-row">
                         <div class="col-md-8 col-md-offset-0">
-                            <div id="carousel-menu" class="carousel slide" data-ride="carousel">
+                            <div id="menus">
+                                <ul>
+                                    @foreach ($menus as $menu)
+                                        <li>{{ $menu->title }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            {{--<div id="carousel-menu" class="carousel slide" data-ride="carousel">--}}
                                 <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carousel-menu" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="1"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="2"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="3"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="4"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="5"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="6"></li>
-                                    <li data-target="#carousel-menu" data-slide-to="7"></li>
-                                </ol>
+                                {{--<ol class="carousel-indicators">--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="0" class="active"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="1"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="2"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="3"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="4"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="5"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="6"></li>--}}
+                                    {{--<li data-target="#carousel-menu" data-slide-to="7"></li>--}}
+                                {{--</ol>--}}
 
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
-                                     <div class="item active">
-                                        <img src="/media/images/Menu/png/2017/05/Main-1.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2018/11/breakfast.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2018/11/brunch.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2019/03/LunchSpringTones.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2018/04/veganVeggie.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2018/04/drinks.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2019/03/SundayLunch.png" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="/media/images/Menu/png/2017/05/Kids.png" />
-                                    </div>
-                                </div>
+                                {{--<div class="carousel-inner">--}}
+                                     {{--<div class="item active">--}}
+                                        {{--<img src="/media/images/Menu/png/2017/05/Main-1.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2018/11/breakfast.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2018/11/brunch.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2019/03/LunchSpringTones.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2018/04/veganVeggie.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2018/04/drinks.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2019/03/SundayLunch.png" />--}}
+                                    {{--</div>--}}
+                                    {{--<div class="item">--}}
+                                        {{--<img src="/media/images/Menu/png/2017/05/Kids.png" />--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
                                 <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-menu" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-menu" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
-                            </div> <!-- Carousel -->
-                        </div>
-                        <div class="col-md-4">
-                            <p class="download-box">
-                                <a href="/media/images/Menu/pdf/2017/05/PalmCourtMenu.pdf" target="_blank" title="Download our menu">
-                                    <i class="fa fa-download"></i>
-                                    Main menu
-                                </a><br/>
-                                <a href="/media/images/Menu/pdf/2018/11/breakfast.pdf" target="_blank" title="Download our breakfast menu">
-                                    <i class="fa fa-download"></i>
-                                    Breakfast
-                                </a><br/>
-                                <a href="/media/images/Menu/pdf/2018/11/brunch.pdf" target="_blank" title="Download our brunch menu">
-                                    <i class="fa fa-download"></i>
-                                    Brunch
-                                </a><br/>
-                                <a href="/media/images/Menu/pdf/2019/03/LunchSpringTones.pdf" target="_blank" title="Download our lunch menu">
-                                    <i class="fa fa-download"></i>
-                                    Lunch - Spring tones
-                                </a><br/>
-                                <a href="/media/images/Menu/pdf/2018/04/veganVeggie.pdf" target="_blank" title="Download our vegetarian/Vegan menu">
-                                    <i class="fa fa-download"></i>
-                                    Vegetarian/Vegan
-                                </a>
-                                <br/>
-                                <a href="/media/images/Menu/pdf/2018/04/drinks.pdf" target="_blank" title="Download our Drinks Menu">
-                                    <i class="fa fa-download"></i>
-                                    Drinks/Wine
-                                </a>
-                                <br/>
-                                <a href="/media/images/Menu/pdf/2019/03/SundayLunch.pdf" target="_blank" title="Download our Sunday Lunch menu">
-                                    <i class="fa fa-download"></i>
-                                    Sunday lunch
-                                </a>
-                                <br/>
-                                <a href="/media/images/Menu/pdf/2017/05/Kids.pdf" target="_blank" title="Download our kids menu">
-                                    <i class="fa fa-download"></i>
-                                    Kids
-                                </a><br/>
-                            </p>
-                        </div>
+                                {{--<a class="left carousel-control" href="#carousel-menu" role="button" data-slide="prev">--}}
+                                    {{--<span class="glyphicon glyphicon-chevron-left"></span>--}}
+                                {{--</a>--}}
+                                {{--<a class="right carousel-control" href="#carousel-menu" role="button" data-slide="next">--}}
+                                    {{--<span class="glyphicon glyphicon-chevron-right"></span>--}}
+                                {{--</a>--}}
+                            {{--</div> <!-- Carousel -->--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-4">--}}
+                            {{--<p class="download-box">--}}
+                                {{--<a href="/media/images/Menu/pdf/2017/05/PalmCourtMenu.pdf" target="_blank" title="Download our menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Main menu--}}
+                                {{--</a><br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2018/11/breakfast.pdf" target="_blank" title="Download our breakfast menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Breakfast--}}
+                                {{--</a><br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2018/11/brunch.pdf" target="_blank" title="Download our brunch menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Brunch--}}
+                                {{--</a><br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2019/03/LunchSpringTones.pdf" target="_blank" title="Download our lunch menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Lunch - Spring tones--}}
+                                {{--</a><br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2018/04/veganVeggie.pdf" target="_blank" title="Download our vegetarian/Vegan menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Vegetarian/Vegan--}}
+                                {{--</a>--}}
+                                {{--<br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2018/04/drinks.pdf" target="_blank" title="Download our Drinks Menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Drinks/Wine--}}
+                                {{--</a>--}}
+                                {{--<br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2019/03/SundayLunch.pdf" target="_blank" title="Download our Sunday Lunch menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Sunday lunch--}}
+                                {{--</a>--}}
+                                {{--<br/>--}}
+                                {{--<a href="/media/images/Menu/pdf/2017/05/Kids.pdf" target="_blank" title="Download our kids menu">--}}
+                                    {{--<i class="fa fa-download"></i>--}}
+                                    {{--Kids--}}
+                                {{--</a><br/>--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
             </section>
