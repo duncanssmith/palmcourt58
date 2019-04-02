@@ -30,9 +30,9 @@
                                     <embed src="../storage/{{ $menu->path }}"
                                         {{-- ?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit" --}}
                                         type="application/pdf"
-                                        width="30%" height="200px"/>
+                                        width="40%" height="80px" />
                                 @else
-                                    <img src="../storage/{{ $menu->path }}" width="30%"/>
+                                    <img src="../storage/{{ $menu->path }}" width="100px" height="80px" />
                                 @endif
                             </a>
                         </td>

@@ -47,24 +47,27 @@
                     <div class="row middle-row">
                         <div class="col-md-8 col-md-offset-0">
                             <div id="menus">
-                                <ul>
-                                    @foreach ($menus as $menu)
-                                        <li>{{ $menu->title }}</li>
-                                    @endforeach
-                                </ul>
+                                <ul class="list-group">
                                 @foreach ($menus as $menu)
-                                    <a href="/menus/{{ $menu->id }}">
-                                        @if ($menu->extension == 'pdf')
-                                            <embed src="../storage/{{ $menu->path }}"
-                                                {{-- ?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit" --}}
-                                                type="application/pdf"
-                                                width="30%" height="200px"/>
-                                        @else
-                                            <img src="../storage/{{ $menu->path }}" width="30%"/>
-                                        @endif
-                                    </a>
-
+                                    <li class="list-group-item" id="{{ $menu->title }}" data-toggle="collapse" href="#{{ $menu->title }}">
+                                        <a href="#{{ $menu->title }}" title="View menu" id="#{{ $menu->title }}">
+                                            {{ $menu->title }}
+                                            <i class="fa fa-chevron-down"></i>&nbsp;
+                                        </a>&nbsp;
+                                        <i class="fa fa-cloud-download"></i>&nbsp;
+                                        <div class="menu collapse" id="#{{ $menu->title }}">
+                                                @if ($menu->extension == 'pdf')
+                                                    <embed src="../storage/{{ $menu->path }}"
+                                                        {{-- ?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit" --}}
+                                                        type="application/pdf"
+                                                        width="30%" height="200px"/>
+                                                @else
+                                                    <img src="../storage/{{ $menu->path }}" width="30%"/>
+                                                @endif
+                                        </div>
+                                    </li>
                                 @endforeach
+                                </ul>
                             </div>
                         </div>
                     </div>
