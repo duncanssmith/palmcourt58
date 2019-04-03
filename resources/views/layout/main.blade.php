@@ -16,6 +16,10 @@
 
         </div>
 
+        @section('foot')
+            @include('layout.foot')
+        @show
+
     </body>
 
 </html>
