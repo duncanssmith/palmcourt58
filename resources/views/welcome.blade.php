@@ -5,14 +5,13 @@
     @show
     <body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">
 
+        @section('nav')
+            @include('layout.nav')
+        @show
         <div id="content">
-
-            @section('nav')
-                @include('layout.nav')
-            @show
-
-            <section id="section-welcome" class="section photo">
-                <div class="container">
+            <ul class="list-group">
+                <li id="section-item-1" href="#section-1" class="list-group-item section photo " data-toggle="collapse">Palm Court Pavilion</li>
+                <div id="section-1" class="container section collapse">
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                            <h1 class="title">Palm Court Pavilion </h1>
@@ -35,10 +34,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="section-menu" class="section photo">
-                <div class="container">
+                <li id="section-item-2" href="#section-2" class="list-group-item section photo section-link-2" data-toggle="collapse">Menus
+                <div id="section-2" class="container section collapse">
                     <div class="row top-row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                             <h1 class="title">Menu</h1>
@@ -73,10 +71,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="section-views" class="section photo">
-                <div class="container">
+                <li id="section-item-3" href="#section-3" class="list-group-item section photo section-link-3" data-toggle="collapse">Views
+                <div id="section-3" class="container section collapse">
                     <div class="row top-row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                             <h1 class="title">Views</h1>
@@ -93,10 +90,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="section-functions" class="section photo">
-                <div class="container">
+                <li id="section-item-4" href="#section-4" class="list-group-item section photo section-link-4" data-toggle="collapse">Functions
+                <div id="section-4" class="container section collapse">
                     <div class="row top-row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                             <h1 class="title">Functions</h1>
@@ -117,10 +113,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="section-about" class="section photo">
-                <div class="container">
+                <li id="section-item-5" href="#section-5" class="list-group-item section photo section-link-5" data-toggle="collapse">About
+                <div id="section-5" class="container section collapse">
                     <div class="row top-row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                             <h1 class="title">About us</h1>
@@ -152,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </ul>
         </div>
     </body>
     @section('foot')
