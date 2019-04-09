@@ -10,11 +10,7 @@
             @include('nav')
         @show
 
-        <div class="container">
-
             @yield('content')
-
-        </div>
 
         @section('foot')
             @include('layout.foot')

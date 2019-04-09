@@ -1,4 +1,7 @@
     <nav id="pcp-navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div>layout.nav</div>
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     @section('head')
-        @include('layout.head')
+        @include('layouts.head')
     @show
     <body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">
 
         @section('nav')
-            @include('layout.nav')
+            @include('layouts.nav')
         @show
         <div id="content">
             <ul class="list-group">
@@ -19,18 +19,17 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            @include('partials.text_1')
+                            {{--@include('partials.text_1')--}}
                         </div>
                     </div>
                     <div class="row video">
                         <div class="col-lg-10 col-md-6 col-sm-4 col-xs-2">
-                            @include('partials.you-tube-video')
+                            {{--@include('partials.you-tube-video')--}}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            @include('partials.opening_times')
-
+                            {{--@include('partials.opening_times')--}}
                         </div>
                     </div>
                 </div>
@@ -100,10 +99,10 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            @include('partials.text_2')
+                            {{--@include('partials.text_2')--}}
                         </div>
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            @include('partials.text_3')
+                            {{--@include('partials.text_3')--}}
                         </div>
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                             <p class="download-box">
@@ -123,27 +122,24 @@
                     </div>
                     <div class="row middle-row">
                         <div class="col-lg-5 col-md-4 col-sm-4 col-xs-3">
-                            @include('partials.address')
+                            {{--@include('partials.address')--}}
                         </div>
                         {{--<div class="col-lg-8 col-md-5 col-sm-4 col-xs-3">--}}
                         <div class="col-lg-7 col-md-8 col-sm-8 col-xs-4">
-                             @include('partials.text_4')
+                             {{--@include('partials.text_4')--}}
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-                             @include('partials.text_5')
+                             {{--@include('partials.text_5')--}}
                         </div>
                     </div>
                     <div class="row bottom-row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-                            @include('partials.opening_times')
+                            {{--@include('partials.opening_times')--}}
                         </div>
                     </div>
                     <div class="row bottom-row">
                         <div class="col-lg-10 col-md-12 col-sm-6 col-xs-4">
-                            <div class="google-map-container">
-                                <h1>How to find us</h1>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.9094489491195!2d-0.36574868437995894!3d50.81431636896051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ4JzUxLjUiTiAwwrAyMSc0OC44Ilc!5e0!3m2!1sen!2suk!4v1451944856246" width="100%" height="400px" frameborder="2" style="border:2px; padding:4px;" ></iframe>
-                            </div>
+                            {{--@include('partials.googlemap')--}}
                         </div>
                     </div>
                 </div>
