@@ -10661,8 +10661,12 @@ a.text-dark:focus {
 }
 
 li.hidden-login-link a i {
-  background-color: #000;
-  color: #000;
+  background-color: #fff;
+  color: #fff;
   box-shadow: 0 2px 4px rgba(1, 1, 1, 0.04);
+}
+
+li.hidden-login-link a i.hover {
+  color: #f00;
 }
 

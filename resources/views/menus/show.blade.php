@@ -1,8 +1,6 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
-    @section('banner')
-    @endsection
 
     <h1 class="title">{{ $menu->title }}</h1>
     @if ($menu->extension == 'pdf')

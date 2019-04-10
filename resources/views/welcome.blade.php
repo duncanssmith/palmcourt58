@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    {{--<body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">--}}
+    <body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">
         <div class="container">
             <ul class="list-group">
                 <li id="section-item-1" href="#section-1" class="list-group-item section photo " data-toggle="collapse">Palm Court Pavilion</li>
@@ -139,5 +139,6 @@
                 </div>
             </ul>
         </div>
+    </body>
 @endsection
 

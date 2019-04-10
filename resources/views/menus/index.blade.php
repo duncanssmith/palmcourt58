@@ -1,9 +1,6 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
-    @section('banner')
-
-    @endsection
 
     <div class="content">
         <h1 class="title">Menus</h1>

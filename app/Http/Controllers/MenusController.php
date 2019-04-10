@@ -24,9 +24,10 @@ class MenusController extends Controller
      */
     public function __construct()
     {
-        //  $this->middleware('auth')->only(['show', 'create', 'edit', 'store', 'update', 'destroy']);
-        $this->middleware('auth');
         // $this->middleware('auth')->except(['index']);
+        //  $this->middleware('auth')->only(['show', 'create', 'edit', 'store', 'update', 'destroy']);
+        // Menus CRUD is auth only
+        $this->middleware('auth');
     }
 
 
@@ -164,7 +165,7 @@ class MenusController extends Controller
      *
      * @return \Illuminate\Http\Response
      *
-     * @throws Error $e
+     * @throws \Exception
      */
     public function destroy(Menu $menu)
     {

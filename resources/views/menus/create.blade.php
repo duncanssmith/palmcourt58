@@ -1,11 +1,9 @@
-@extends('layout')
+@extends('layouts.main')
 
 @section('content')
     <div class="content">
         <div class="">
-            <h1 class="title">
-                Create Menu
-            </h1>
+            <h1 class="title">Create Menu</h1>
         </div>
 
         <form method="POST" action="/menus" enctype="multipart/form-data">
