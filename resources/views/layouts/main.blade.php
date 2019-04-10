@@ -2,18 +2,18 @@
 <html>
 
     @section('head')
-        @include('layout.head')
+        @include('layouts.head')
     @show
 
     <body>
         @section('nav')
-            @include('nav')
+            @include('layouts.nav')
         @show
 
             @yield('content')
 
         @section('foot')
-            @include('layout.foot')
+            @include('layouts.foot')
         @show
 
     </body>

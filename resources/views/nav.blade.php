@@ -1,6 +1,6 @@
 <div class="nav">
 
-    <div>views.nav</div>
+    <div>nav</div>
 
     <ul class="links">
         <li><a href="/">Palm Court Pavilion</a></li>
