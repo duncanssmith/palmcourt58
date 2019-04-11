@@ -21,26 +21,32 @@
             @endif
 
             <div class="form-group">
-                <input type="checkbox" name="active" placeholder="active" value="true">
+                <label for="active">Is active?</label>
+                <input type="checkbox" name="active" placeholder="active" {{ old('active') }} >
             </div>
 
             <div class="form-group">
-                @include('layout.image_upload_field')
+                <label for="image">Menu Image</label>
+                @include('layouts.image_upload_field')
             </div>
 
             <div class="form-group">
+                <label for="path">Path</label>
                 <input type="text" name="path" placeholder="path" value="{{ $menu->path }}">
             </div>
 
             <div class="form-group">
+                <label for="extension">Extension</label>
                 <input type="text" name="extension" placeholder="extension" value="{{ $menu->extension }}">
             </div>
 
             <div class="form-group">
+                <label for="title">Title</label>
                 <input type="text" name="title" placeholder="title" value="{{ $menu->title }}">
             </div>
 
             <div class="form-group">
+                <label for="description">Description</label>
                 <textarea name="description" placeholder="description" value="{{ $menu->description }}"></textarea>
             </div>
             <br/>

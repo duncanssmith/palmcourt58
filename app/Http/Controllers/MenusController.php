@@ -60,6 +60,7 @@ class MenusController extends Controller
      */
     public function store()
     {
+        dd(request());
         //  'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
@@ -86,28 +87,13 @@ class MenusController extends Controller
                     $menu->path = $storageLocal;
                     $menu->extension = request()->menuImage->extension();
                     $menu->description = request('description');
-                    $menu->active = !empty(request('active')) ? 1 : 0;
+                    $menu->active = request('active') ? 1 : 0;
                     $menu->save();
                 }
-
-                //  $menu = Menu::latest()->first();
-
-                //  $menu->save();
-
-                // Try to upload the photo
-                //  $destinationPath = getEnv('PUBLIC_BASE_PATH').'uploads/menus';
-                //  $targetPath = getEnv('PUBLIC_BASE_PATH').'media/images/';
-                //  $action = 'store';
-
-                //  $file->move($destinationPath, $reference.'.'.$extension);
             }
         } else {
             return redirect('/menu/create')->withErrors();
         }
-
-        // $file = time().'.'.request()->menuImage->getClientOrOriginalExtension();
-        // request()->menuImage->move(public_path('images'), $file);
-        // $this->saveUploadedMenuFile($menu, $file, $path, $extension, $origin, $target, $action);
 
         return redirect('/menus');
     }
@@ -146,14 +132,42 @@ class MenusController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
-        $menu->update(
-            request()->validate(
-                [
-                    'title' => ['required'],
-                    'description' => []
-                ]
-            )
-        );
+//        $menu->update(
+//            request()->validate(
+//                [
+//                    'title' => ['required'],
+//                    'description' => []
+//                ]
+//            )
+        if (request()->hasFile('menuImage')) {
+            if (request()->file('menuImage')->isValid()) {
+
+                $filePath = "uploads/menus";
+
+                $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
+                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
+                $fileUrlLocal = asset($storageLocal);
+                $fileUrlPublic = asset($storagePublic);
+            }
+        }
+        if ((request()->validate(
+                    [
+                        'title' => ['required'],
+                        'description' => [],
+                    ]
+        ))
+        ) {
+            $menu->title = request('title');
+            if (!empty($storageLocal)) {
+                $menu->path = $storageLocal;
+                $menu->extension = request()->menuImage->extension();
+            }
+            $menu->description = request('description');
+            $menu->active = request('active') ? 1 : 0;
+            $menu->save();
+        } else {
+            return redirect('/menu/create')->withErrors();
+        }
 
         return redirect('/menus');
     }

@@ -10,7 +10,7 @@
             @csrf
 
             <div class="form-group">
-                @include('layout.image_upload_field')
+                @include('layouts.image_upload_field')
             </div>
 
             <div class="form-group">
@@ -31,7 +31,7 @@
 
             <div class="form-group">
                 <label for="active">Is active?</label>
-                <input type="checkbox" name="active" placeholder="active" value="{{ old('active') }}">
+                <input type="checkbox" name="active" placeholder="active" >
             </div>
 
             <div class="form-group">
