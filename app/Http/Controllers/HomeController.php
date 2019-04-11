@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Menu;
+//use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,30 @@ class HomeController extends Controller
      */
     public function welcome()
     {
+        return view('welcome');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function menu()
+    {
+        $menus = Menu::where('active', 1)
+            ->orderBy('name', 'desc')
+            ->get();
+
+        return view('menu', ['menus' => $menus]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function view()
+    {
         $carouselImages = [
             "../media/images/aMainFront-1.jpg",
             "../media/images/aInteriorSpace-1.jpg",
@@ -33,15 +58,28 @@ class HomeController extends Controller
             "../media/images/aMainFront-2.jpg",
             "../media/images/aInteriorSpace-2.jpg",
         ];
-//        {{-- <img src="/media/images/Home/aMainFront-3.jpg" width="400px"> --}}
-//        {{-- <img src="/media/images/Home/gCoffeeMachine.jpg" width="200px"> --}}
-//        {{-- <img src="/media/images/Home/aMainFront-4.jpg" width="400px"> --}}
-//        {{-- <img src="/media/images/Home/gCoffeePour.jpg" width="400px"> --}}
-//        {{-- <img src="/media/images/Home/gFacade.jpg" width="400px"> --}}
 
-        $menus = DB::table('menus')->get();
+        return view('view', ['carouselImages' => $carouselImages]);
+    }
 
-        return view('welcome', ['menus' => $menus, 'carouselImages' => $carouselImages]);
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function functions()
+    {
+        return view('functions');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function about()
+    {
+        return view('about');
     }
 
     /**
