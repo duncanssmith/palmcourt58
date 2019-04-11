@@ -18,7 +18,7 @@
                         {{--<img id="nav-logo" src="/media/images/Home/logo-transparent.png" class="nav-logo" width="210" >--}}
                     </a>
                 </li>
-                <li class="list-group-item"><a href="/">Welcome</a></li>
+                {{--<li class="list-group-item"><a href="/">Welcome</a></li>--}}
                 <li class="list-group-item"><a href="/menu">Menu</a></li>
                 <li class="list-group-item"><a href="/views">Views</a></li>
                 <li class="list-group-item"><a href="/functions">Functions</a></li>

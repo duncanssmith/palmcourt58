@@ -1,7 +1,5 @@
 <div class="nav">
-
     <div>nav</div>
-
     <ul class="links">
         <li><a href="/">Palm Court Pavilion</a></li>
         <li><a href="/menus" aria-label="Menu list">Menu list <i class="icon-list"></i></a></li>
