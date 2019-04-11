@@ -11,7 +11,7 @@
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 {{--<div class="fotorama" data-nav="thumbs">--}}
                 @foreach ($carouselImages as $image)
-                    <img src="/media/images/{{ $image }}" width="40px" />
+                    <img src="storage/{{ $image }}" width="124px" />
                 @endforeach
                 {{--</div>--}}
 

@@ -1,6 +1,4 @@
     <nav class="navbar navbar-expand-md navbar-light navbar-pc5">
-
-
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -9,7 +7,6 @@
                 aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto list-group">
                 {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
@@ -41,11 +38,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
+                        <!-- we dont want people to register either - its a read-only site -->
+                        {{--@if (Route::has('register'))--}}
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+                            {{--</li>--}}
+                        {{--@endif--}}
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

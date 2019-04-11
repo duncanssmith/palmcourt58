@@ -50,13 +50,13 @@ class HomeController extends Controller
     public function view()
     {
         $carouselImages = [
-            "../media/images/aMainFront-1.jpg",
-            "../media/images/aInteriorSpace-1.jpg",
-            "../media/images/aBreakfastBuffetRoom.jpg",
-            "../media/images/aBreakfastBuffetContinental.jpg",
-            "../media/images/aBreakfastBuffetBakery.jpg",
-            "../media/images/aMainFront-2.jpg",
-            "../media/images/aInteriorSpace-2.jpg",
+            "media/images/aMainFront-1.jpg",
+            "media/images/aInteriorSpace-1.jpg",
+            "media/images/aBreakfastBuffetRoom.jpg",
+            "media/images/aBreakfastBuffetContinental.jpg",
+            "media/images/aBreakfastBuffetBakery.jpg",
+            "media/images/aMainFront-2.jpg",
+            "media/images/aInteriorSpace-2.jpg",
         ];
 
         return view('view', ['carouselImages' => $carouselImages]);
