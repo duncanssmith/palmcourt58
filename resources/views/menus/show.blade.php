@@ -3,6 +3,9 @@
 @section('content')
 
     <h1 class="title">{{ $menu->title }}</h1>
+
+    @include('nav')
+
     @if ($menu->extension == 'pdf')
         <embed src="../storage/{{$menu->path}}#page=1&toolbar=0&navpanes=0&scrollbar=1&view=fit"
             type="application/pdf"

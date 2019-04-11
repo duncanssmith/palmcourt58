@@ -5,6 +5,8 @@
     <div class="content">
         <h1 class="title">Menus</h1>
 
+        @include('nav')
+
         <table>
             <thead>
                 <tr>

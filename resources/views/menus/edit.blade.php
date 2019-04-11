@@ -8,6 +8,8 @@
             </h1>
         </div>
 
+        @include('nav')
+
         <form method="POST" action="/menus/{{ $menu->id }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')

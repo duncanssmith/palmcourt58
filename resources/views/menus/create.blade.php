@@ -6,6 +6,8 @@
             <h1 class="title">Create Menu</h1>
         </div>
 
+        @include('nav')
+
         <form method="POST" action="/menus" enctype="multipart/form-data">
             @csrf
 
