@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-expand-md navbar-light navbar-pc5">
+    <nav class="navbar navbar-expand-md navbar-light">
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -33,7 +33,6 @@
                 <!-- we dont want people to log in unless they are the site owner -->
                 @if(Auth::user())
                     <!-- Authentication Links -->
-                        <li class="list-group-item"><a href="/menus">Menus</a></li>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -51,9 +50,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="/menus" ><i class="fa fa-list"></i> List menus</a>
+                                <a class="dropdown-item" href="/menus/create" ><i class="fa fa-plus"></i> Add menu</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                    document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>
                                     {{ __('Logout') }}
                                 </a>
 

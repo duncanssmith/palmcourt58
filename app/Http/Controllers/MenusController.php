@@ -119,7 +119,7 @@ class MenusController extends Controller
      */
     public function edit(Menu $menu)
     {
-        return view('menus.edit', ['menu' => $menu]);
+        return view('menus.edit', ['menu' => $menu, 'active' => $menu->active]);
     }
 
     /**
