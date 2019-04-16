@@ -74,7 +74,7 @@
                                     &nbsp;
                                 </div>
                                 <div class="col-9">
-                                    <button type="submit" class="btn btn-info">Create menu</button>
+                                    <button type="submit" class="btn btn-outline-info btn-sm">Create menu</button>
                                 </div>
                             </div>
 

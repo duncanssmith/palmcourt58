@@ -5,11 +5,20 @@
         @include('nav')
         <div class="card">
             <div class="card-header">
-                <h1 class="title">{{ $menu->title }}</h1>
+                <h1 class="title">Show menu</h1>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="title" class="pull-right">Title</label>
+                            </div>
+                            <div class="col-9">
+                                {{ $menu->title }}
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-3">
                                 <label for="image" class="pull-right">Image</label>
@@ -60,7 +69,7 @@
                                 &nbsp;
                             </div>
                             <div class="col-9">
-                                <a class="btn btn-info" href="/menus/{{ $menu->id }}/edit">Edit</a>
+                                <a class="btn btn-outline-info btn-sm" href="/menus/{{ $menu->id }}/edit">Edit</a>
                             </div>
                         </div>
                     </div>

@@ -5,9 +5,7 @@
         @include('nav')
         <div class="card">
             <div class="card-header">
-                <h1 class="title">
-                    Edit Menu
-                </h1>
+                <h1 class="title">Edit Menu</h1>
             </div>
 
             <div class="card-body">
