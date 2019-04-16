@@ -7,11 +7,9 @@
             <div class="card-header">
                 <h1 class="title">Create Menu</h1>
             </div>
-
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-
                         <form method="POST" action="/menus" enctype="multipart/form-data">
                             @csrf
 
@@ -20,27 +18,27 @@
                                     <label for="image" class="pull-right">Image</label>
                                 </div>
                                 <div class="col-9">
-                                    @include('layouts.image_upload_field')
+                                    @include('layouts.image_upload_field', ['create' => 1])
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="path" class="pull-right">Path</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="text" name="path" placeholder="path" value="{{ old('path') }}" disabled>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-3">--}}
+                                    {{--<label for="path" class="pull-right">Path</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-9">--}}
+                                    {{--<input type="text" name="path" placeholder="path" value="{{ old('path') }}" disabled>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="extension" class="pull-right">Extension</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="text" name="extension" placeholder="extension" value="{{ old('extension') }}" disabled>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-3">--}}
+                                    {{--<label for="extension" class="pull-right">Extension</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-9">--}}
+                                    {{--<input type="text" name="extension" placeholder="extension" value="{{ old('extension') }}" disabled>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="row">
                                 <div class="col-3">

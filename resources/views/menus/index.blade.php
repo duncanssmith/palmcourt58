@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-1">&nbsp;</div>
                     <div class="col-10">
-                        <table>
+                        <table class="table table-hover table-light">
                         <thead>
                             <tr>
                                 <th>Image</th>
@@ -31,7 +31,7 @@
                                 <tr>
                                     <td>
                                         <a href="/menus/{{ $menu->id }}">
-                                            @include('layouts.image_show_field', ['menu' => $menu, 'width' => '30%', 'height' => '200px'])
+                                            @include('layouts.image_show_field', ['menu' => $menu, 'width' => '30%', 'height' => '160px'])
                                         </a>
                                     </td>
                                     <td>
@@ -54,7 +54,13 @@
                                     </td>
                                     <td>{{ $menu->title }}</td>
                                     <td>{{ $menu->description }}</td>
-                                    <td>{{ $menu->active }}</td>
+                                    <td>
+                                        @if ($menu->active == 1)
+                                            <i class="fa fa-check text-success"></i>
+                                        @else
+                                            <i class="fa fa-times text-danger"></i>
+                                        @endif
+                                    </td>
                                     <td><a href="/menus/{{ $menu->id }}" class="btn btn-sm btn-outline-info">Show</a></td>
                                     <td><a href="/menus/{{ $menu->id }}/edit" class="btn btn-sm btn-outline-success">Edit</a></td>
                                 </tr>
@@ -66,7 +72,7 @@
             </div>
 
             <div class="card-footer">
-                &nbsp;
+                {{ $menus->links() }}
             </div>
         </div>
     </div>

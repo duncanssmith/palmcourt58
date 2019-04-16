@@ -42,27 +42,27 @@
                                     <label for="image" class="pull-right">New image</label>
                                 </div>
                                 <div class="col-9">
-                                    @include('layouts.image_upload_field')
+                                    @include('layouts.image_upload_field', ['create' => 0])
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="path" class="pull-right">Path</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="text" name="path" placeholder="path" value="{{ $menu->path }}" disabled>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-3">--}}
+                                    {{--<label for="path" class="pull-right">Path</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-9">--}}
+                                    {{--<input type="text" name="path" placeholder="path" value="{{ $menu->path }}" disabled>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="extension" class="pull-right">Extension</label>
-                                </div>
-                                <div class="col-9">
-                                    <input type="text" name="extension" placeholder="extension" value="{{ $menu->extension }}" disabled>
-                                </div>
-                            </div>
+                            {{--<div class="row">--}}
+                                {{--<div class="col-3">--}}
+                                    {{--<label for="extension" class="pull-right">Extension</label>--}}
+                                {{--</div>--}}
+                                {{--<div class="col-9">--}}
+                                    {{--<input type="text" name="extension" placeholder="extension" value="{{ $menu->extension }}" disabled>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="row">
                                 <div class="col-3">
@@ -109,7 +109,7 @@
                                 <div class="col-3">&nbsp;
                                 </div>
                                 <div class="col-9">
-                                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Are you sure?">Delete</button>
                                 </div>
                             </div>
                         </form>

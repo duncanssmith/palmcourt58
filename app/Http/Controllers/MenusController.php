@@ -6,6 +6,7 @@ use App\Menu;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -38,7 +39,7 @@ class MenusController extends Controller
      */
     public function index()
     {
-        $menus = Menu::all();
+        $menus = Menu::paginate(3);
 
         return view('menus.index', ['menus' => $menus]);
     }
@@ -60,7 +61,7 @@ class MenusController extends Controller
      */
     public function store()
     {
-        dd(request());
+//        dd(request());
         //  'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
@@ -205,15 +206,15 @@ class MenusController extends Controller
         // name the ref field after the menu id
         $ref = sprintf("%04d", $menu->id);
 
-        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
+//        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
 
         $file->move($file->pathname, $origin);
 
-        dd($origin);
+//        dd($origin);
 
         $target = $origin.$menu->id;
 
-        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
+//        dd($menu, $file, $path, $extension, $origin, $target, $action, $ref);
 
 //        $canvas = Image::canvas(640, 640, '#ffffff');
 //        $layer = Image::make($target);
