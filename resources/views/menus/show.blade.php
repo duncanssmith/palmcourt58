@@ -28,21 +28,21 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="path" class="pull-right">Path</label>
-                            </div>
-                            <div class="col-9">
-                                {{ $menu->path }}
-                            </div>
-                        </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="col-3">--}}
+                                {{--<label for="path" class="pull-right">Path</label>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-9">--}}
+                                {{--{{ $menu->path }}--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         <div class="row">
                             <div class="col-3">
                                 <label for="extension" class="pull-right">Extension</label>
                             </div>
                             <div class="col-9">
-                                {{ $menu->extension }}
+                                @include('layouts.file_extension_badge', ['menu' => $menu])
                             </div>
                         </div>
 
@@ -60,7 +60,11 @@
                                 <label for="active" class="pull-right">Is active?</label>
                             </div>
                             <div class="col-9">
-                                {{ $menu->active }}
+                                @if ($menu->active == 1)
+                                    <i class="fa fa-check text-success"></i>
+                                @else
+                                    <i class="fa fa-times text-danger"></i>
+                                @endif
                             </div>
                         </div>
 

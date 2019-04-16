@@ -15,20 +15,13 @@
                             <li class="list-group-item" id="menuLink-{{ $menu->id }}" data-toggle="collapse" href="#menu-{{ $menu->id }}">
                                 <a class="#menuLink{{ $menu->id }}" title="View menu" id="#menu-{{ $menu->id }}">
                                     {{ $menu->title }}
-                                    <i class="fa fa-chevron-down"></i>&nbsp;
                                 </a>&nbsp;
                                 <a href="{{ $menu->path }}" target="_blank" title="Download">
-                                    <i class="fa fa-cloud-download"></i>&nbsp;
+                                    <i class="fa fa-cloud"></i>&nbsp;
                                 </a>
                             </li>
                             <div class="menu collapse" id="menu-{{ $menu->id }}">
-                                @if ($menu->extension == 'pdf')
-                                    <embed src="../storage/{{ $menu->path }}?page=1&toolbar=0&navpanes=0@scrollbar=0&view=fit"
-                                        type="application/pdf"
-                                        width="100%" height="600px"/>
-                                @else
-                                    <img src="../storage/{{ $menu->path }}" width="30%"/>
-                                @endif
+                                @include('layouts.image_show_field', ['menu' => $menu, 'width' => '100%', 'height' => '1200px'])
                             </div>
                         @endforeach
                     </ul>

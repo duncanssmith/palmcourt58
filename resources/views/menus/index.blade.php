@@ -35,22 +35,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        @switch ($menu->extension)
-                                            @case ('pdf')
-                                                <div class="badge badge-danger">
-                                                @break
-                                            @case ('png')
-                                                <div class="badge badge-info">
-                                                @break
-                                            @case ('jpg')
-                                                <div class="badge badge-success">
-                                                @break
-                                            @default
-                                                <div class="badge badge-default">
-                                                @break
-                                        @endswitch
-                                            {{ $menu->extension }}
-                                            </div>
+                                        @include('layouts.file_extension_badge', ['menu' => $menu])
                                     </td>
                                     <td>{{ $menu->title }}</td>
                                     <td>{{ $menu->description }}</td>
