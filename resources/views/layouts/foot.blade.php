@@ -1,19 +1,19 @@
 <div class="row">
-    <div class="col-2">&nbsp;</div>
-    <div class="col-8">
+    <div class="col-4">&nbsp;</div>
+    <div class="col-4">
         <div class="row">
             <div class="col-4">
-                <p>Some text here</p>
+                <small>&copy; copyright {{ date('Y') }}</small>
             </div>
             <div class="col-4">
-                <p>Some further here</p>
+                &nbsp;
             </div>
             <div class="col-4">
-                <p>And finally...</p>
+                <small>All rights reserved</small>
             </div>
         </div>
     </div>
-    <div class="col-2">&nbsp;</div>
+    <div class="col-4">&nbsp;</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
