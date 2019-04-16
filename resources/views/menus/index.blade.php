@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="content">
+    <div class="container">
         @include('nav')
         <div class="card">
             <div class="card-header">

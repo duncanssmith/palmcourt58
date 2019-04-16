@@ -14,8 +14,8 @@
                 {{--</a>--}}
                 <li class="">
                     <a href="/" class="navbar-brand header-link">
-                        Palm Court Pavilion
-                        {{--<img id="nav-logo" src="/media/images/Home/logo-transparent.png" class="nav-logo" width="210" >--}}
+                        {{--Palm Court Pavilion--}}
+                        <img id="nav-logo" src="/media/images/Home/logo-transparent.png" class="nav-logo" width="210" alt="Palm Court Pavilion" >
                     </a>
                 </li>
                 {{--<li class="list-group-item"><a href="/">Welcome</a></li>--}}

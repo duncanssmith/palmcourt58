@@ -13,7 +13,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            {{--@include('partials.text_1')--}}
+                            @include('partials.text_1')
                         </div>
                     </div>
                     <div class="row video">
@@ -23,7 +23,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                            {{--@include('partials.opening_times')--}}
+                            @include('partials.opening_times')
                         </div>
                     </div>
                 </div>
