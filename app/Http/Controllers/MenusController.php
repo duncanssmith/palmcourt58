@@ -61,25 +61,21 @@ class MenusController extends Controller
      */
     public function store()
     {
-//        dd(request());
-        //  'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,pdf|max:4096',
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
 
                 $filePath = "uploads/menus";
 
                 $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
-                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
-                $fileUrlLocal = asset($storageLocal);
-                $fileUrlPublic = asset($storagePublic);
-
-                //  dd($storageLocal, $storagePublic, $fileUrlLocal, $fileUrlPublic);
+//                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
+//                $fileUrlLocal = asset($storageLocal);
+//                $fileUrlPublic = asset($storagePublic);
 
                 //  Menu::create(
                 if ((request()->validate(
                     [
                         'title' => ['required'],
-                        'description' => [],
+                        'description' => ['required'],
                     ]
                 ))
                 ) {

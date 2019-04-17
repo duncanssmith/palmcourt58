@@ -49,7 +49,8 @@ class HomeController extends Controller
      */
     public function view()
     {
-        $carouselImages = [
+
+        $images = [
             "media/images/aMainFront-1.jpg",
             "media/images/aInteriorSpace-1.jpg",
             "media/images/aBreakfastBuffetRoom.jpg",
@@ -59,7 +60,7 @@ class HomeController extends Controller
             "media/images/aInteriorSpace-2.jpg",
         ];
 
-        return view('view', ['carouselImages' => $carouselImages]);
+        return view('view', ['images' => $images]);
     }
 
     /**
