@@ -4,5 +4,5 @@
            type="application/pdf"
            width="{{ $width }}" height="{{ $height }}" />
 @else
-    <img src="{{ '/'.$menu->path }}" width="100px" height="80px" />
+    <img src="{{ '/'.$menu->path }}" width="{{ $width }}" height="{{ $height }}" />
 @endif
