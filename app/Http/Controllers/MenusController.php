@@ -39,7 +39,7 @@ class MenusController extends Controller
      */
     public function index()
     {
-        $menus = Menu::paginate(3);
+        $menus = Menu::orderBy('hierarchy')->paginate(3);
 
         return view('menus.index', ['menus' => $menus]);
     }
@@ -88,6 +88,7 @@ class MenusController extends Controller
                     $menu->path = $storageLocal;
                     $menu->extension = request()->menuImage->extension();
                     $menu->description = request('description');
+                    $menu->hierarchy = request('hierarchy');
                     $menu->active = request('active') ? 1 : 0;
                     $menu->save();
                 }
@@ -164,6 +165,7 @@ class MenusController extends Controller
                 $menu->extension = request()->menuImage->extension();
             }
             $menu->description = request('description');
+            $menu->hierarchy = request('hierarchy');
             $menu->active = request('active') ? 1 : 0;
             $menu->save();
         } else {

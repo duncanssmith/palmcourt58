@@ -13,5 +13,6 @@ class Menu extends Model
         'title' ,
         'description',
         'active',
+        'hierarchy',
     ];
 }

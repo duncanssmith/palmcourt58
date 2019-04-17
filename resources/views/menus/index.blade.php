@@ -22,6 +22,7 @@
                                 <th>Title</th>
                                 <th>Description</th>
                                 <th>Active</th>
+                                <th>Hierarchy</th>
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -46,6 +47,7 @@
                                             <i class="fa fa-times text-danger"></i>
                                         @endif
                                     </td>
+                                    <td>{{ $menu->hierarchy }}</td>
                                     <td><a href="/menus/{{ $menu->id }}" class="btn btn-sm btn-outline-info">Show</a></td>
                                     <td><a href="/menus/{{ $menu->id }}/edit" class="btn btn-sm btn-outline-success">Edit</a></td>
                                 </tr>

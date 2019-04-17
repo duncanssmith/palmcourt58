@@ -81,6 +81,16 @@
                                     <input type="text" name="description" placeholder="description" value="{{ $menu->description }}" />
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="hierarchy" class="pull-right">Hierarchy</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="number" name="hierarchy" placeholder="hierarchy" value="{{ $menu->hierarchy }}" />
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-3">&nbsp;
                                 </div>

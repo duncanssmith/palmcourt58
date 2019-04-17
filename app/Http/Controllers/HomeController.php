@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function menu()
     {
         $menus = Menu::where('active', 1)
-            ->orderBy('name', 'desc')
+            ->orderBy('hierarchy', 'asc')
             ->get();
 
         return view('menu', ['menus' => $menus]);

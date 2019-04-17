@@ -20,6 +20,7 @@ class CreateMenusTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->unsignedTinyInteger('active');
+            $table->unsignedSmallInteger('hierarchy');
             $table->timestamps();
         });
     }

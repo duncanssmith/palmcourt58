@@ -69,6 +69,15 @@
 
                             <div class="row">
                                 <div class="col-3">
+                                    <label for="hierarchy" class="pull-right">Hierarchy</label>
+                                </div>
+                                <div class="col-9">
+                                    <input name="hierarchy" type="number" placeholder="hierarchy" value="{{old('hierarchy')}}" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
                                     &nbsp;
                                 </div>
                                 <div class="col-9">
