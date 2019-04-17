@@ -15,7 +15,7 @@
                 <li class="">
                     <a href="/" class="navbar-brand header-link">
                         {{--Palm Court Pavilion--}}
-                        <img id="nav-logo" src="/media/images/Home/logo-transparent.png" class="nav-logo" width="210" alt="Palm Court Pavilion" >
+                        <img id="nav-logo" src="/media/images/logo-transparent.png" class="nav-logo" width="210" alt="Palm Court Pavilion" >
                     </a>
                 </li>
                 {{--<li class="list-group-item"><a href="/">Welcome</a></li>--}}
@@ -31,18 +31,18 @@
 
             <ul class="navbar-nav ml-auto">
                 <!-- we dont want people to log in unless they are the site owner -->
-                @if(Auth::user())
+                {{-- @if(Auth::user()) --}}
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         <!-- we dont want people to register either - its a read-only site -->
-                        {{--@if (Route::has('register'))--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-                            {{--</li>--}}
-                        {{--@endif--}}
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link navbar dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -65,7 +65,7 @@
                             </div>
                         </li>
                     @endguest
-                @endif
+                {{-- @endif --}}
             </ul>
 
         </div>

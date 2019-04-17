@@ -32,7 +32,7 @@
                                 <tr>
                                     <td>
                                         <a href="/menus/{{ $menu->id }}">
-                                            @include('layouts.image_show_field', ['menu' => $menu, 'width' => '30%', 'height' => '160px'])
+                                            @include('layouts.image_show_field', ['menu' => $menu, 'width' => '35%', 'height' => '140px'])
                                         </a>
                                     </td>
                                     <td>

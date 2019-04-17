@@ -7,21 +7,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-md-offset-0">
-
-                {{--<div id="menusDownloads">--}}
-                    {{--<ul class="list-group">--}}
-                        {{--@foreach ($menus as $menu)--}}
-                            {{--<li class="list-group-item" id="menuLink-{{ $menu->id }}">--}}
-                                {{--<a href="{{ $menu->path }}" target="_blank" title="Download">--}}
-                                    {{--{{ $menu->title }}--}}
-                                    {{--<i class="fa fa-cloud"></i>&nbsp;--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                        {{--@endforeach--}}
-                    {{--</ul>--}}
-                {{--</div>--}}
-
+            <div class="col-8">
                 <div id="carouselMenus" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @for ($i = 0; $i < count($menus); $i++)
@@ -57,6 +43,25 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="menusDownloads">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3>Downloads</h3>
+                        </li>
+                        @foreach ($menus as $menu)
+                            <li class="list-group-item" id="menuLink-{{ $menu->id }}">
+                                <a href="{{ $menu->path }}" target="_blank" title="Download">
+                                    {{ $menu->title }},
+                                    {{ $menu->description }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+
                 </div>
 
             </div>
