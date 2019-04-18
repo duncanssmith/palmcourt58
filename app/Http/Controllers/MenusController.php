@@ -63,35 +63,47 @@ class MenusController extends Controller
     {
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
-
                 $filePath = "uploads/menus";
+                $image = request()->menuImage;
 
-                $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
-//                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
-//                $fileUrlLocal = asset($storageLocal);
-//                $fileUrlPublic = asset($storagePublic);
+                $storageLocal = Storage::disk('local')->put($filePath, $image);
+                $storagePublic = Storage::disk('public')->put($filePath, $image);
+
+                $fileUrlLocal = asset($storageLocal);
+                $fileUrlPublic = asset($storagePublic);
+
+                $reference = sprintf("%s%06d.%s", date('Y-m-d-His'), 1, $image->extension());
+//                $image->move($filePath, $reference);
+
+//                $menu->path = $storageLocal;
+//                $menu->save();
+
+                dd($storageLocal, $storagePublic, $image, $filePath, $reference);
 
                 //  Menu::create(
-                if ((request()->validate(
+                if (request()->validate(
                     [
                         'title' => ['required'],
                         'description' => ['required'],
                     ]
-                ))
-                ) {
+                )) {
                     $menu = new Menu();
                     $menu->title = request('title');
-                    $menu->path = $storageLocal;
+                    $menu->path = 'temp';
                     $menu->extension = request()->menuImage->extension();
                     $menu->description = request('description');
                     $menu->hierarchy = request('hierarchy');
                     $menu->active = request('active') ? 1 : 0;
                     $menu->save();
+
                 }
             }
         } else {
             return redirect('/menu/create')->withErrors();
         }
+
+        // ----
+        // ----
 
         return redirect('/menus');
     }

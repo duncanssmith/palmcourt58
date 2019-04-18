@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <div id="section-2" class="container section ">
+    <div id="section-2" class="container section section-menu">
         <div class="row ">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Menu</h1>

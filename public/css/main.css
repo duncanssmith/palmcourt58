@@ -115,10 +115,9 @@ h4.opening-times {
     opacity:0.5;
 }
 
-#section-welcome {
+.section-welcome {
     padding-top: 40px;
-    background: #282828 url('../images/Home/aMainFront-5.jpg') no-repeat center center;
-    /*background: #282828;*/
+    background: #282828 url('../media/images/aMainFront-5.jpg') no-repeat center center;
     background-size: cover;
     color: rgba(255,255,255,1);
     font-size: 1.0em;
@@ -127,14 +126,14 @@ h4.opening-times {
 #section-about {
     padding-top: 40px;
     text-align: left;
-    background: #282828 url('../images/Home/gCoffeeMachine.jpg') no-repeat center center;
+    background: #282828 url('../media/images/gCoffeeMachine.jpg') no-repeat center center;
     /*background: #282828;*/
     background-size: cover;
     color: rgba(255,255,255,1);
 }
 #section-functions {
     padding-top: 40px;
-    background: #282828 url('../images/Home/gQuartet.jpg') no-repeat center center;
+    background: #282828 url('../media/images/gQuartet.jpg') no-repeat center center;
     /*background: #282828;*/
     background-size: cover;
     color: rgba(255,255,255,1);
@@ -143,14 +142,14 @@ h4.opening-times {
 }
 #section-views {
     padding-top: 40px;
-    background: #282828 url('../images/Home/aInteriorSpace-1.jpg') no-repeat center center;
+    background: #282828 url('../media/images/aInteriorSpace-1.jpg') no-repeat center center;
     /*background: #282828;*/
     background-size: cover;
     color: rgba(255,255,255,1);
 }
 #section-menu {
     padding-top: 40px;
-    background: #282828 url('../images/Home/gOffer1.jpg') no-repeat center center;
+    background: #282828 url('../media/images/gOffer1.jpg') no-repeat center center;
     /*background: #282828;*/
     background-size: cover;
 }
@@ -161,7 +160,7 @@ h4.opening-times {
   margin: 0 0 0 80px;
 }
 .top-photo {
-  background: #eee url('../images/Home/gOffer1.jpg') no-repeat center center;
+  background: #eee url('../media/images/gOffer1.jpg') no-repeat center center;
   /*background: #282828;*/
   min-height: 285px;
   background-size: cover;
@@ -199,7 +198,7 @@ section.flat > .container > .photo-float {
 
 }
 .photo-float {
-  background: #ddd url('../images/Home/gQuartet.jpg') no-repeat center center;
+  background: #ddd url('../media/images/gQuartet.jpg') no-repeat center center;
 }
 p.float-text-main {
     text-align: center;
@@ -235,7 +234,7 @@ section.photo > .container > .row {
 }
 
 .welcome {
-    text-align;left;
+    text-align:left;
     width: 300px;
     height: 200px;
     position: absolute;

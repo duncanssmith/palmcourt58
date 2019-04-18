@@ -2,7 +2,7 @@
 
 @section('content')
     {{--<body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">--}}
-        <div class="container section section-1">
+        <div class="container section section-1 section-welcome">
             <div class="row">
                 <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                     <h1 class="title">Palm Court Pavilion </h1>
