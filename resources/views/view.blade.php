@@ -2,7 +2,7 @@
 
 @section('content')
     {{--<li id="section-item-3" href="#section-3" class="list-group-item section photo section-link-3" data-toggle="collapse">Views--}}
-    <div id="section-3" class="container section section-views">
+    <div class="" id="page-view">
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Views</h1>

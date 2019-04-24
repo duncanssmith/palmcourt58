@@ -2,7 +2,7 @@
 
 @section('content')
     {{--<body data-spy="scroll" data-target="#pcp-navbar" data-offset="90">--}}
-        <div class="container section section-1 section-welcome">
+        <div class="" id="page-welcome">
             <div class="row">
                 <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                     <h1 class="title">Palm Court Pavilion </h1>
@@ -16,7 +16,7 @@
                     @include('partials.text_1')
                 </div>
             </div>
-            <div class="row video">
+            <div class="row">
                 <div class="col-lg-10 col-md-6 col-sm-4 col-xs-2">
                     {{--@include('partials.you-tube-video')--}}
                 </div>

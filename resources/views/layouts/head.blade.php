@@ -20,13 +20,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    {{--<link rel="stylesheet" href="{{ asset('css/main.css') }}">--}}
+    {{--<link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
-    <!-- Scripts -->
-    {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
-
-    <!-- Scripts -->
+    <!-- Scripts  FOR SOME REASON THIS HAS TO BE HERE TWICE FOR THE DROPDOWN TO WORK!!! Bad -->
+    <script src="{{ asset('js/app.js') }}" ></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 
 </head>

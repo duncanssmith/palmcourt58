@@ -1,3 +1,6 @@
+<div class="row">
+    <div class="col-12">
+
     <nav class="navbar navbar-expand-md navbar-light">
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse"
@@ -8,25 +11,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto ">
-                {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
-                {{--{{ config('app.name', 'Palm Court Pavilion') }}--}}
-                {{--</a>--}}
-                <li class="">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
                     <a href="/" class="navbar-brand header-link">
-                        {{--Palm Court Pavilion--}}
                         <img id="nav-logo" src="/media/images/logo-transparent.png" class="nav-logo" width="210" alt="Palm Court Pavilion" >
                     </a>
                 </li>
-                {{--<li class="list-group-item"><a href="/">Welcome</a></li>--}}
-                <li class=""><a href="/menu" class="navbar">Menu</a></li>
-                <li class=""><a href="/views" class="navbar">Views</a></li>
-                <li class=""><a href="/functions" class="navbar">Functions</a></li>
-                <li class=""><a href="/about" class="navbar">About us</a></li>
-
-{{--                    @if(Auth::user())--}}
-                    {{--<li class="list-group-item"><a href="/menus">Menus</a></li>--}}
-                {{--@endif--}}
+                <li class="nav-item"><a href="/" class="nav-link header-link-hidden">Welcome</a></li>
+                <li class="nav-item"><a href="/menu" class="nav-link header-link">Menu</a></li>
+                <li class="nav-item"><a href="/views" class="nav-link header-link">Views</a></li>
+                <li class="nav-item"><a href="/functions" class="nav-link header-link">Functions</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link header-link">About us</a></li>
             </ul>
 
             <ul class="navbar-nav ml-auto">
@@ -35,12 +30,17 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link header-link-hidden text-indigo" href="{{ route('login') }}">
+                                <i class="fa fa-lock"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link header-link-secure" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         <!-- we dont want people to register either - its a read-only site -->
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link header-link-secure" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
@@ -67,18 +67,7 @@
                     @endguest
                 {{-- @endif --}}
             </ul>
-
-        </div>
-        <div class="navbar-header pull-right">
-            <div class="nav navbar-nav">
-                <ul class="nav navbar-nav">
-                    <li class="pull-right hidden-login-link">
-                        <a href="login">
-                            <i class="fa fa-key"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
-
+</div>
+</div>

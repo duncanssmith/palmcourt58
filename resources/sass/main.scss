@@ -1,12 +1,16 @@
-@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT:400);html,
-body {
+//@import url(//fonts.googleapis.com/css?family=Open%20Sans:600);
+//@import url(//fonts.googleapis.com/css?family=Lora:400);
+//@import url(//fonts.googleapis.com/css?family=Oswald:400);
+@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT:400);
+
+html, body {
+  //background-color: rgba(100, 70, 7, 0.8);
   background-color: rgba(200, 140, 14, 0.2);
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-left: 100px;
-  font-family: "Old Standard TT", sans-serif;
+  font-family: 'Old Standard TT', sans-serif;
   font-size: 1em;
   font-weight: 200;
   text-align: left;
@@ -14,8 +18,7 @@ body {
   display: table;
 }
 
-.container-fluid,
-.container {
+.container-fluid, .container {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -30,7 +33,7 @@ body {
 
 .title {
   padding: 60px 40px 60px 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 100;
   font-size: 64px;
   background-color: rgba(0, 0, 0, 0.45);
@@ -39,7 +42,7 @@ body {
 
 .title-sub {
   font-size: 38px;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   font-weight: 100;
 }
 
@@ -72,14 +75,13 @@ body {
 
 h4.opening-times {
   padding: 60px 40px 60px 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.8em;
   line-height: 170%;
   font-weight: 400;
 }
 
-.banner,
-a {
+.banner, a {
   background-color: rgba(190, 190, 190, 0.1);
 }
 
@@ -112,43 +114,43 @@ a {
 
 .section-welcome {
   padding-top: 40px;
-  background: #282828 url("/storage/app/public/media/images/aMainFront-5.jpg") no-repeat center center;
+  background: #282828 url('/storage/app/public/media/images/aMainFront-5.jpg') no-repeat center center;
   background-size: cover;
-  color: white;
-  font-size: 1em;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.0em;
   font-weight: normal;
 }
 
 #section-about {
   padding-top: 40px;
   text-align: left;
-  background: #282828 url("/storage/media/images/gCoffeeMachine.jpg") no-repeat center center;
+  background: #282828 url('/storage/media/images/gCoffeeMachine.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
 #section-functions {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/gQuartet.jpg") no-repeat center center;
+  background: #282828 url('/storage/media/images/gQuartet.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
-  color: white;
-  font-size: 1em;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.0em;
   font-weight: normal;
 }
 
 #section-views {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/aInteriorSpace-1.jpg") no-repeat center center;
+  background: #282828 url('/storage/media/images/aInteriorSpace-1.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
 #section-menu {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/gOffer1.jpg") no-repeat center center;
+  background: #282828 url('/storage/media/images/gOffer1.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
 }
@@ -162,7 +164,7 @@ a {
 }
 
 .top-photo {
-  background: #eee url("/storage/media/images/gOffer1.jpg") no-repeat center center;
+  background: #eee url('/storage/media/images/gOffer1.jpg') no-repeat center center;
   /*background: #282828;*/
   min-height: 285px;
   background-size: cover;
@@ -178,16 +180,14 @@ a {
 section.flat {
   background: rgba(230, 230, 230, 0.6);
   padding: 0;
-}
-
-section.flat > .container {
-  background: rgba(230, 230, 230, 0.4);
-  padding: 0;
-}
-
-section.flat > .container > .photo-float {
-  padding: 30px 0px 30px 0px;
-  min-height: 285px;
+  > .container {
+    background: rgba(230, 230, 230, 0.4);
+    padding: 0;
+    > .photo-float {
+      padding: 30px 0px 30px 0px;
+      min-height: 285px;
+    }
+  }
 }
 
 .groupon-logo-style {
@@ -204,23 +204,24 @@ section.flat > .container > .photo-float {
 }
 
 .photo-float {
-  background: #ddd url("/media/images/gQuartet.jpg") no-repeat center center;
+  background: #ddd url('/media/images/gQuartet.jpg') no-repeat center center;
 }
 
-p.float-text-main {
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.65);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-p.float-text {
-  text-align: left;
-  margin: 10px;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.65);
-  color: rgba(255, 255, 255, 0.9);
+p {
+  &.float-text-main {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  &.float-text {
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
 
 div.float-text-main {
@@ -232,17 +233,15 @@ div.float-text-main {
 }
 
 section.photo {
-  background: #b4a014;
-}
-
-section.photo > .container {
-  background: rgba(255, 255, 255, 0);
-  padding: 0;
-}
-
-section.photo > .container > .row {
-  padding: 0;
-  background: rgba(200, 200, 200, 0);
+  background: rgba(180, 160, 20, 1);
+  > .container {
+    background: rgba(255, 255, 255, 0);
+    padding: 0;
+    > .row {
+      padding: 0;
+      background: rgba(200, 200, 200, 0);
+    }
+  }
 }
 
 .welcome {
@@ -258,28 +257,23 @@ section.photo > .container > .row {
 
 a {
   text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a.header-link-hidden {
-  background-color: inherit;
-  color: rgba(255, 255, 255, 0.1);
-}
-
-a.header-link-secure {
-  color: #c6c !important;
-}
-
-a.header-link {
-  color: #666;
-}
-
-a.header-dropdown-link {
-  font-size: 0.8em;
-  color: #666;
+  &:visited {
+    text-decoration: none;
+  }
+  &.header-link-hidden {
+    background-color: inherit;
+    color: rgba(255,255,255,0.1);
+  }
+  &.header-link-secure {
+    color: #c6c !important;
+  }
+  &.header-link {
+    color: #666;
+  }
+  &.header-dropdown-link {
+    font-size: 0.8em;
+    color: #666;
+  }
 }
 
 .top-photo {

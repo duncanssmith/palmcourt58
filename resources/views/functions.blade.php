@@ -1,8 +1,8 @@
 @extends('layouts.main')
 @section('content')
     {{--<li id="section-item-4" href="#section-4" class="list-group-item section photo section-link-4" data-toggle="collapse">Functions--}}
-    <div id="section-4" class="container section section-functions ">
-        <div class="row top-row">
+    <div class="" id="page-functions">
+        <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Functions</h1>
             </div>
