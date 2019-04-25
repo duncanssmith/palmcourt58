@@ -13,6 +13,7 @@ class Menu extends Model
         'title' ,
         'description',
         'active',
+        'function',
         'hierarchy',
     ];
 }

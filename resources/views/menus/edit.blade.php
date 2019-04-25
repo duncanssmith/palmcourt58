@@ -39,6 +39,19 @@
 
                             <div class="row">
                                 <div class="col-3">
+                                    <label for="function" class="pull-right">Is functions?</label>
+                                </div>
+                                <div class="col-9">
+                                    @if ($menu->function)
+                                        <input type="checkbox" name="function" placeholder="active" checked>
+                                    @else
+                                        <input type="checkbox" name="function" placeholder="active">
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
                                     <label for="image" class="pull-right">New image</label>
                                 </div>
                                 <div class="col-9">

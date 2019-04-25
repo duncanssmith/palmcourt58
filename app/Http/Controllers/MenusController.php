@@ -75,6 +75,7 @@ class MenusController extends Controller
                     $menu->description = request('description');
                     $menu->hierarchy = request('hierarchy');
                     $menu->active = request('active') ? 1 : 0;
+                    $menu->function = request('function') ? 1 : 0;
                     $menu->save();
                 }
 
@@ -180,6 +181,7 @@ class MenusController extends Controller
             $menu->description = request('description');
             $menu->hierarchy = request('hierarchy');
             $menu->active = request('active') ? 1 : 0;
+            $menu->function = request('function') ? 1 : 0;
             $menu->save();
         } else {
             return redirect('/menu/create')->withErrors();

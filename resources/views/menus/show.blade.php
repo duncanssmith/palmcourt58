@@ -62,6 +62,19 @@
 
                         <div class="row">
                             <div class="col-3">
+                                <label for="function" class="pull-right">Is function?</label>
+                            </div>
+                            <div class="col-9">
+                                @if ($menu->function == 1)
+                                    <i class="fa fa-check text-success"></i>
+                                @else
+                                    <i class="fa fa-times text-danger"></i>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
                                 <label for="hierarchy" class="pull-right">Hierarchy</label>
                             </div>
                             <div class="col-9">

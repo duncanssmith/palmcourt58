@@ -35,7 +35,7 @@ class HomeController extends Controller
      */
     public function menu()
     {
-        $menus = Menu::where('active', 1)
+        $menus = Menu::where([['active', '=', '1'], ['function', '=', '0']])
             ->orderBy('hierarchy', 'asc')
             ->get();
 
@@ -64,13 +64,17 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application page 'functions'.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function functions()
     {
-        return view('functions');
+        $functions = Menu::where([['active', '=', '1'], ['function', '=', '1']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('functions', ['functions' => $functions]);
     }
 
     /**

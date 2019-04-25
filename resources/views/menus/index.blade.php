@@ -22,6 +22,7 @@
                                 <th>Title</th>
                                 <th>Description</th>
                                 <th>Active</th>
+                                <th>Functions info</th>
                                 <th>Hierarchy</th>
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
@@ -45,6 +46,13 @@
                                     <td>{{ $menu->description }}</td>
                                     <td>
                                         @if ($menu->active == 1)
+                                            <i class="fa fa-check text-success"></i>
+                                        @else
+                                            <i class="fa fa-times text-danger"></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($menu->function == 1)
                                             <i class="fa fa-check text-success"></i>
                                         @else
                                             <i class="fa fa-times text-danger"></i>

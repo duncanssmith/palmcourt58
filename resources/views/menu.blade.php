@@ -66,12 +66,13 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        @else
-            <div class="col-12">
-                <h4>No menus to display</h4>
-            </div>
-        @endif
+            @else
+                <div class="row">
+                    <div class="col-12">
+                        <h4>No menus to display</h4>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 @endsection
