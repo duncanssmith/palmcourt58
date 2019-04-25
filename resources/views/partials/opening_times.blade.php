@@ -1,4 +1,5 @@
-<h4 class="opening-times float-text">Opening times</h4>
+{{--<h4 class="opening-times float-text">Opening times</h4>--}}
+<h1>Opening times</h1>
 <p class="opening-times float-text">
   Monday: Closed (available for private functions)<br/>
   Bank Holidays: Open 9am to 5pm<br/>

@@ -61,16 +61,24 @@ class MenusController extends Controller
     {
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
-                //  Menu::create(
                 if (request()->validate(
                     [
                         'title' => ['required'],
                         'description' => ['required'],
                     ]
                 )) {
+
+                    $path = "uploads/menus";
+                    $uploadedFile = request()->menuImage;
+                    $fileName = sprintf("%s.%s", date('Ymd-His'), $uploadedFile->extension());
+//                    $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
+//                    $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
+//                    $fileUrlLocal = asset($storageLocal);
+//                    $fileUrlPublic = asset($storagePublic);
+
                     $menu = new Menu();
                     $menu->title = request('title');
-                    $menu->path = 'tmp';
+                    $menu->path = $uploadedFile->storeAs($path, $fileName, 'local');
                     $menu->extension = request()->menuImage->extension();
                     $menu->description = request('description');
                     $menu->hierarchy = request('hierarchy');
@@ -78,38 +86,10 @@ class MenusController extends Controller
                     $menu->function = request('function') ? 1 : 0;
                     $menu->save();
                 }
-
-                $path = "uploads/menus";
-//                $destinationPath = "uploads/menus";
-                $uploadedFile = request()->menuImage;
-
-                $fileName = sprintf("%06d.%s", $menu->id, $uploadedFile->extension());
-
-                $menu->path = $uploadedFile->storeAs($path, $fileName, 'local');
-                $menu->save();
-
-
-//                $storageLocal = Storage::disk('local')->put($filePath, $image);
-//                $storagePublic = Storage::disk('public')->put($filePath, $image);
-//                $fileUrlLocal = asset($storageLocal);
-//                $fileUrlPublic = asset($storagePublic);
-
-//                $reference = sprintf("%06d.%s", $menu->id, $image->extension());
-
-//                $image->move($destinationPath, $reference);
-
-//                dd($storageLocal, $storagePublic, $image, $filePath, $reference, $fileUrlLocal, $fileUrlPublic);
-
-                // update the path and name of the image file
-//                $menu->path = $storageLocal;
-//                $menu->save();
             }
         } else {
             return redirect('/menu/create')->withErrors();
         }
-
-        // ----
-        // ----
 
         return redirect('/menus');
     }
@@ -148,36 +128,28 @@ class MenusController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
-//        $menu->update(
-//            request()->validate(
-//                [
-//                    'title' => ['required'],
-//                    'description' => []
-//                ]
-//            )
         if (request()->hasFile('menuImage')) {
             if (request()->file('menuImage')->isValid()) {
 
-                $filePath = "uploads/menus";
-
-                $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
-                $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
-                $fileUrlLocal = asset($storageLocal);
-                $fileUrlPublic = asset($storagePublic);
             }
         }
-        if ((request()->validate(
+        if (request()->validate(
                     [
                         'title' => ['required'],
                         'description' => [],
                     ]
-        ))
-        ) {
+        )) {
+            $path = "uploads/menus";
+            $uploadedFile = request()->menuImage;
+            $fileName = sprintf("%s.%s", date('Ymd-His'), $uploadedFile->extension());
+//                    $storageLocal = Storage::disk('local')->put($filePath, request()->menuImage);
+//                    $storagePublic = Storage::disk('public')->put($filePath, request()->menuImage);
+//                    $fileUrlLocal = asset($storageLocal);
+//                    $fileUrlPublic = asset($storagePublic);
+
             $menu->title = request('title');
-            if (!empty($storageLocal)) {
-                $menu->path = $storageLocal;
-                $menu->extension = request()->menuImage->extension();
-            }
+            $menu->path = $uploadedFile->storeAs($path, $fileName, 'local');
+            $menu->extension = request()->menuImage->extension();
             $menu->description = request('description');
             $menu->hierarchy = request('hierarchy');
             $menu->active = request('active') ? 1 : 0;

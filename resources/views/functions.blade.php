@@ -9,20 +9,17 @@
             </div>
         </div>
 
-        {{--<div class="row">--}}
-            {{--<div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">--}}
-                {{--@include('partials.text_2')--}}
-            {{--</div>--}}
-            {{--<div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">--}}
-                {{--@include('partials.text_3')--}}
-            {{--</div>--}}
-            {{--<div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">--}}
-                {{--<p class="download-box">--}}
-                    {{--<a href="/media/images/Documents/2018/06/Functions.pdf" target="_blank" title="Download Functions info">Functions information <i class="fa fa-download"></i></a><br>--}}
-                {{--<h1>Please call us on 01903 212 011 for a quote</h1>--}}
-                {{--</p>--}}
-            {{--</div>--}}
-        {{--</div>--}}
+        <div class="row">
+            <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
+                @include('partials.text_2')
+            </div>
+            <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
+                @include('partials.text_3')
+            </div>
+            <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
+                <h3>Please call us on 01903 212 011 for a quote</h3>
+            </div>
+        </div>
 
         <div class="row">
             @if (count($functions) > 0)
@@ -89,7 +86,5 @@
                 </div>
             @endif
         </div>
-
-
     </div>
 @endsection
