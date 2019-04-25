@@ -1,8 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container">
-        @include('nav')
+    <div class="row">
+
+        {{--@include('nav')--}}
+
         <div class="card">
             <div class="card-header">
                 <h1 class="title">Create Menu</h1>
@@ -21,24 +23,6 @@
                                     @include('layouts.image_upload_field', ['create' => 1])
                                 </div>
                             </div>
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="path" class="pull-right">Path</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--<input type="text" name="path" placeholder="path" value="{{ old('path') }}" disabled>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="extension" class="pull-right">Extension</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--<input type="text" name="extension" placeholder="extension" value="{{ old('extension') }}" disabled>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
 
                             <div class="row">
                                 <div class="col-3">

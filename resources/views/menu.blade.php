@@ -1,11 +1,14 @@
 @extends('layouts.main')
+
 @section('content')
     <div class="" id="page-menu">
-        <div class="row ">
+
+        <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Menu</h1>
             </div>
         </div>
+
         <div class="row">
             @if (count($menus) > 0)
                 <div class="col-8">
@@ -66,7 +69,7 @@
             </div>
         @else
             <div class="col-12">
-                <h4>No menus available</h4>
+                <h4>No menus to display</h4>
             </div>
         @endif
         </div>

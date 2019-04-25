@@ -1,12 +1,14 @@
 @extends('layouts.main')
+
 @section('content')
-    {{--<li id="section-item-5" href="#section-5" class="list-group-item section photo section-link-5" data-toggle="collapse">About--}}
     <div class="" id="page-about">
+
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">About us</h1>
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-5 col-md-4 col-sm-4 col-xs-3">
                 @include('partials.address')
@@ -29,5 +31,6 @@
                 @include('partials.googlemap')
             </div>
         </div>
+
     </div>
 @endsection

@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="container">
-        @include('nav')
+    <div class="row">
+        {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
                 <h1 class="title">Menu list</h1>

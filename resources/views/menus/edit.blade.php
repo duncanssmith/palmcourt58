@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container">
-        @include('nav')
+    <div class="row">
+        {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
                 <h1 class="title">Edit Menu</h1>
@@ -45,24 +45,6 @@
                                     @include('layouts.image_upload_field', ['create' => 0])
                                 </div>
                             </div>
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="path" class="pull-right">Path</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--<input type="text" name="path" placeholder="path" value="{{ $menu->path }}" disabled>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="extension" class="pull-right">Extension</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--<input type="text" name="extension" placeholder="extension" value="{{ $menu->extension }}" disabled>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
 
                             <div class="row">
                                 <div class="col-3">
@@ -111,19 +93,33 @@
                         </form>
 
                         <hr>
-                        <form method="POST" action="/menus/{{ $menu->id }}">
-                            @csrf
-                            @method('DELETE')
 
-                            <div class="row">
-                                <div class="col-3">&nbsp;
-                                </div>
-                                <div class="col-9">
-                                    <button class="btn btn-sm btn-outline-danger" title="Are you sure?">Delete</button>
+                        <div class="row">
+                            <div class="col-3">&nbsp;</div>
+                            <div class="col-9">
+                                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#deleteConfirm" aria-hidden="true">Delete</button>
+                                {{--<button class="btn btn-sm btn-outline-danger" title="Are you sure?">Delete</button>--}}
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="deleteConfirm">
+                            <div class="modal-dialog" id="">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h3>Are you sure you want to delete {{ $menu->title }}?</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" action="/menus/{{ $menu->id }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
             </div>
