@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-12">
-
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: #acc;">
 
             <button class="navbar-toggler" type="button"
                     data-toggle="collapse"
@@ -13,13 +12,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a href="/" class="navbar-brand header-link">
-                            <img id="nav-logo" src="/media/images/logo-transparent.png" class="nav-logo" alt="Palm Court Pavilion" >
-                        </a>
-                    </li>
+                <ul class="navbar-nav mr-auto mt-1">
                     <li class="nav-item"><a href="/" class="nav-link header-link">Welcome</a></li>
                     <li class="nav-item"><a href="/menu" class="nav-link header-link">Menu</a></li>
                     <li class="nav-item"><a href="/views" class="nav-link header-link">Views</a></li>
@@ -31,28 +24,36 @@
                     <!-- we dont want people to log in unless they are the site owner -->
                     {{-- @if(Auth::user()) --}}
                     <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a href="/" class="navbar-brand nav-link header-link">
+                            <img id="nav-logo" src="/media/images/logo-transparent.png" class="nav-logo" alt="Palm Court Pavilion" >
+                        </a>
+                    </li>
                     @guest
-                        <li class="nav-item">
+                        <li class="nav-item" style="vertical-align: center;">
                             <a class="nav-link header-link" href="{{ route('login') }}" title="log in"><i class="fa fa-key"></i></a>
                         </li>
                         {{--<li class="nav-item">--}}
                             {{--<a class="nav-link header-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
                         {{--</li>--}}
                         <!-- we dont want people to register either - its a read-only site -->
-{{--                            @if (Route::has('register'))--}}
+                        {{-- @if (Route::has('register'))--}}
                             {{--<li class="nav-item">--}}
                                 {{--<a class="nav-link header-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
                             {{--</li>--}}
                         {{--@endif--}}
                     @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link header-link-secure" href="{{ route('logout') }}"
+                        <li class="nav-item" style="vertical-align: center;">
+                            <a class="nav-link header-link header-link" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();" title="logout">
                                 <i class="fa fa-lock"></i>
                             </a>
-                            <a id="navbarDropdown" class="nav-link-secure navbar dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link header-link nav-link-secure dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                                {{--<i class="fa fa-user"></i>--}}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
