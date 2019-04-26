@@ -33,7 +33,7 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link header-link" href="{{ route('login') }}"><i class="fa fa-key"></i></a>
+                            <a class="nav-link header-link" href="{{ route('login') }}" title="log in"><i class="fa fa-key"></i></a>
                         </li>
                         {{--<li class="nav-item">--}}
                             {{--<a class="nav-link header-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
@@ -48,20 +48,22 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link header-link-secure" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>
+                                document.getElementById('logout-form').submit();" title="logout">
+                                <i class="fa fa-lock"></i>
                             </a>
                             <a id="navbarDropdown" class="nav-link-secure navbar dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/home" ><i class="fa fa-home"></i> Home</a>
                                 <a class="dropdown-item" href="/menus" ><i class="fa fa-list"></i> List menus</a>
                                 <a class="dropdown-item" href="/menus/create" ><i class="fa fa-plus"></i> Add menu</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>
-                                    {{ __('Logout') }}
-                                </a>
+                                {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                                    {{--onclick="event.preventDefault();--}}
+                                    {{--document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>--}}
+                                    {{--{{ __('Logout') }}--}}
+                                {{--</a>--}}
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
