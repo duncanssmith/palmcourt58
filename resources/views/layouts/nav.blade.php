@@ -31,7 +31,7 @@
                     </li>
                     @guest
                         <li class="nav-item" style="vertical-align: center;">
-                            <a class="nav-link header-link" href="{{ route('login') }}" title="log in"><i class="fa fa-key"></i></a>
+                            <a id="nav-login-key" class="nav-link header-link" href="{{ route('login') }}" title="log in"><i class="fa fa-key"></i></a>
                         </li>
                         {{--<li class="nav-item">--}}
                             {{--<a class="nav-link header-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
@@ -44,7 +44,7 @@
                         {{--@endif--}}
                     @else
                         <li class="nav-item" style="vertical-align: center;">
-                            <a class="nav-link header-link header-link" href="{{ route('logout') }}"
+                            <a id="nav-logout-lock" class="nav-link header-link header-link" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();" title="logout">
                                 <i class="fa fa-lock"></i>

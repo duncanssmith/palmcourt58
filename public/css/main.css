@@ -1,6 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT:400);html,
 body {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #aacccc;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -43,8 +43,8 @@ body {
 }
 
 .address {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0.35);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
   font-family: Old Standard TT;
   font-size: 1.2em;
   line-height: 170%;
@@ -52,8 +52,8 @@ body {
 }
 
 .address-email {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
   font-family: Old Standard TT;
   font-size: 1em;
   line-height: 100%;
@@ -61,20 +61,35 @@ body {
 }
 
 .opening-times {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0.35);
   font-family: Old Standard TT;
   font-size: 1.2em;
   line-height: 170%;
   font-weight: 200;
 }
 
-h4.opening-times {
-  padding: 60px 40px 60px 40px;
-  font-family: "Oswald", sans-serif;
-  font-size: 1.8em;
-  line-height: 170%;
+.opening-times > p {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.opening-times > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background: white;
+  color: rgba(0, 0, 0, 0.45);
+  margin: 10px;
+  padding: 10px;
   font-weight: 400;
+}
+
+.google-map-container {
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .section {
@@ -83,15 +98,36 @@ h4.opening-times {
 }
 
 #nav-logo {
-  width: 120px;
-  background-color: rgba(255, 255, 255, 0.0);
-  margin: 0px;
-  padding: 1px;
+  width: 140px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key:hover {
+  color: rgba(240, 240, 240, 0.9);
+}
+
+#nav-logout-lock {
+  color: white;
+  margin-top: 8px;
+  padding: 0px;
+}
+
+#nav-logout-lock:hover {
+  color: rgba(240, 240, 240, 0.9);
 }
 
 .row.video div {
   width: inherit;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   margin: 60px;
   padding: 24px;
 }
@@ -100,45 +136,44 @@ h4.opening-times {
   opacity: 0.5;
 }
 
-.section-welcome {
+#page-welcome {
   padding-top: 40px;
-  background: #282828 url("/storage/app/public/media/images/aMainFront-5.jpg") no-repeat center center;
+  background: #333 url("/public/media/images/aMainFront-5.jpg") no-repeat center center;
   background-size: cover;
   color: white;
   font-size: 1em;
   font-weight: normal;
 }
 
-#section-about {
+#page-about {
   padding-top: 40px;
   text-align: left;
-  background: #282828 url("/storage/media/images/gCoffeeMachine.jpg") no-repeat center center;
+  background: #282828 url("/public/media/images/gCoffeeMachine.jpg") no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
   color: white;
 }
 
-#section-functions {
+#page-functions {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/gQuartet.jpg") no-repeat center center;
-  /*background: #282828;*/
+  background: #282828 url("/public/media/images/gQuartet.jpg") no-repeat center center;
   background-size: cover;
   color: white;
   font-size: 1em;
   font-weight: normal;
 }
 
-#section-views {
+#page-views {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/aInteriorSpace-1.jpg") no-repeat center center;
+  background: #282828 url("/public/media/images/aInteriorSpace-1.jpg") no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
   color: white;
 }
 
-#section-menu {
+#page-menu {
   padding-top: 40px;
-  background: #282828 url("/storage/media/images/gOffer1.jpg") no-repeat center center;
+  background: #282828 url("/public/media/images/gOffer1.jpg") no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
 }
@@ -160,7 +195,7 @@ h4.opening-times {
 }
 
 .download-box {
-  background: rgba(255, 255, 255, 0.8);
+  background: white;
   padding: 1em;
   font-size: 1.3em;
 }
@@ -186,13 +221,6 @@ section.flat > .container > .photo-float {
   color: green;
 }
 
-.google-map-container {
-  margin: 10px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.99);
-  color: rgba(0, 0, 0, 0.95);
-}
-
 .photo-float {
   background: #ddd url("/media/images/gQuartet.jpg") no-repeat center center;
 }
@@ -201,24 +229,24 @@ p.float-text-main {
   text-align: center;
   margin: 10px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.65);
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
 }
 
 p.float-text {
   text-align: left;
   margin: 10px;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.65);
-  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
 }
 
 div.float-text-main {
   text-align: center;
   margin: 10px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  color: rgba(0, 0, 0, 0.99);
+  background: white;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 section.photo {
@@ -232,7 +260,7 @@ section.photo > .container {
 
 section.photo > .container > .row {
   padding: 0;
-  background: rgba(200, 200, 200, 0);
+  background: rgba(255, 255, 255, 0);
 }
 
 .welcome {
@@ -256,7 +284,7 @@ a:visited {
 
 a.header-link-hidden {
   background-color: inherit;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(240, 240, 240, 0.9);
 }
 
 a.header-link-secure {

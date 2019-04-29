@@ -9,6 +9,7 @@
                     <h1 class="title">Palm Court Pavilion </h1>
                 </div>
             </div>
+            {{--<img src="{{ asset('/media/images/aMainFront-1.jpg') }}" />--}}
 
             <div class="row">
                 <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">

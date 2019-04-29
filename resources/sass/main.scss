@@ -3,10 +3,13 @@
 //@import url(//fonts.googleapis.com/css?family=Oswald:400);
 @import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT:400);
 
+@import "_variables";
+
 html, body {
   //background-color: rgba(100, 70, 7, 0.8);
   //background-color: rgba(200, 140, 14, 0.2);
-  background-color: rgba(255, 255, 255, 0.2);
+  //background-color: rgba(255, 255, 255, 0.2);
+  background-color: $duckeggblue;
   height: 100%;
   width: 100%;
   padding: 0;
@@ -32,24 +35,25 @@ html, body {
   display: inline-block;
 }
 
+// HEADINGS, TEXT
 .title {
   padding: 60px 40px 60px 40px;
   font-family: 'Oswald', sans-serif;
   font-weight: 100;
   font-size: 64px;
-  background-color: rgba(0, 0, 0, 0.45);
-  color: rgba(255, 255, 255, 0.95);
+  background-color: $charcoal;
+  color: $clearwhite;
 }
 
 .title-sub {
   font-size: 38px;
-  color: rgba(255, 255, 255, 1);
+  color: $fullwhite;
   font-weight: 100;
 }
 
 .address {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0.35);
+  color: $fullwhite;
+  background-color: $charcoal;
   font-family: Old Standard TT;
   font-size: 1.2em;
   line-height: 170%;
@@ -57,8 +61,8 @@ html, body {
 }
 
 .address-email {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0);
+  color: $fullwhite;
+  background-color: $charcoal;
   font-family: Old Standard TT;
   font-size: 1em;
   line-height: 100%;
@@ -66,20 +70,30 @@ html, body {
 }
 
 .opening-times {
-  color: rgba(255, 255, 255, 0.99);
-  background-color: rgba(0, 0, 0, 0.35);
   font-family: Old Standard TT;
   font-size: 1.2em;
   line-height: 170%;
   font-weight: 200;
 }
 
-h4.opening-times {
-  padding: 60px 40px 60px 40px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.8em;
-  line-height: 170%;
+.opening-times > p {
+  color: $fullwhite;
+  background-color: $charcoal;
+}
+
+.opening-times > h1,h2,h3,h4,h5,h6 {
+  background: $fullwhite;
+  color: $charcoal;
+  margin: 10px;
+  padding: 10px;
   font-weight: 400;
+}
+
+.google-map-container {
+  margin: 10px;
+  padding: 10px;
+  background: $fullwhite;
+  color: $charcoal;
 }
 
 .section {
@@ -89,14 +103,35 @@ h4.opening-times {
 
 #nav-logo {
   width: 140px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: $transparent;
   margin: 8px;
   padding: 4px;
 }
 
+#nav-login-key {
+  background-color: $transparent;
+  color:  $transparent;
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key:hover {
+  color: $opaque;
+}
+
+#nav-logout-lock {
+  color: $fullwhite;
+  margin-top: 8px;
+  padding: 0px;
+}
+
+#nav-logout-lock:hover {
+  color: $opaque;
+}
+
 .row.video div {
   width: inherit;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $clearwhite;
   margin: 60px;
   padding: 24px;
 }
@@ -105,45 +140,44 @@ h4.opening-times {
   opacity: 0.5;
 }
 
-.section-welcome {
+#page-welcome {
   padding-top: 40px;
-  background: #282828 url('/storage/app/public/media/images/aMainFront-5.jpg') no-repeat center center;
+  background: #333 url('/public/media/images/aMainFront-5.jpg') no-repeat center center;
   background-size: cover;
-  color: rgba(255, 255, 255, 1);
+  color: $fullwhite;
   font-size: 1.0em;
   font-weight: normal;
 }
 
-#section-about {
+#page-about {
   padding-top: 40px;
   text-align: left;
-  background: #282828 url('/storage/media/images/gCoffeeMachine.jpg') no-repeat center center;
+  background: #282828 url('/public/media/images/gCoffeeMachine.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
-  color: rgba(255, 255, 255, 1);
+  color: $fullwhite;
 }
 
-#section-functions {
+#page-functions {
   padding-top: 40px;
-  background: #282828 url('/storage/media/images/gQuartet.jpg') no-repeat center center;
-  /*background: #282828;*/
+  background: #282828 url('/public/media/images/gQuartet.jpg') no-repeat center center;
   background-size: cover;
-  color: rgba(255, 255, 255, 1);
+  color: $fullwhite;
   font-size: 1.0em;
   font-weight: normal;
 }
 
-#section-views {
+#page-views {
   padding-top: 40px;
-  background: #282828 url('/storage/media/images/aInteriorSpace-1.jpg') no-repeat center center;
+  background: #282828 url('/public/media/images/aInteriorSpace-1.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
-  color: rgba(255, 255, 255, 1);
+  color:  $fullwhite;
 }
 
-#section-menu {
+#page-menu {
   padding-top: 40px;
-  background: #282828 url('/storage/media/images/gOffer1.jpg') no-repeat center center;
+  background: #282828 url('/public/media/images/gOffer1.jpg') no-repeat center center;
   /*background: #282828;*/
   background-size: cover;
 }
@@ -165,7 +199,7 @@ h4.opening-times {
 }
 
 .download-box {
-  background: rgba(255, 255, 255, 0.8);
+  background: $fullwhite;
   padding: 1em;
   font-size: 1.3em;
 }
@@ -189,13 +223,6 @@ section.flat {
   color: green;
 }
 
-.google-map-container {
-  margin: 10px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.99);
-  color: rgba(0, 0, 0, 0.95);
-}
-
 .photo-float {
   background: #ddd url('/media/images/gQuartet.jpg') no-repeat center center;
 }
@@ -205,15 +232,15 @@ p {
     text-align: center;
     margin: 10px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.65);
-    color: rgba(255, 255, 255, 0.9);
+    background: $charcoal;
+    color: $fullwhite;
   }
   &.float-text {
     text-align: left;
     margin: 10px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.65);
-    color: rgba(255, 255, 255, 0.9);
+    background: $charcoal;
+    color: $fullwhite;
   }
 }
 
@@ -221,18 +248,18 @@ div.float-text-main {
   text-align: center;
   margin: 10px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  color: rgba(0, 0, 0, 0.99);
+  background: $fullwhite;
+  color: $charcoal;
 }
 
 section.photo {
   background: rgba(180, 160, 20, 1);
   > .container {
-    background: rgba(255, 255, 255, 0);
+    background: $transparent;
     padding: 0;
     > .row {
       padding: 0;
-      background: rgba(200, 200, 200, 0);
+      background:  $transparent;
     }
   }
 }
@@ -255,7 +282,7 @@ a {
   }
   &.header-link-hidden {
     background-color: inherit;
-    color: rgba(255,255,255,0.1);
+    color: $opaque;
   }
   &.header-link-secure {
     color: #c6c !important;
@@ -273,6 +300,6 @@ a {
   /*background: #282828 url('') no-repeat top center;*/
   min-height: 285px;
   background-size: cover;
-  color: rgba(100, 100, 100, 0.9);
+  color: $midgrey;
 }
 
