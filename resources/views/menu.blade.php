@@ -35,7 +35,7 @@
                                     @endphp
                                 @endif
                                 <div class="carousel-item {{$isActive}}">
-                                    @include('layouts.image_show_field', ['menu' => $menu, 'width' => '100%', 'height' => '1200px'])
+                                    @include('layouts.image_show_field', ['menu' => $menu, 'width' => '800px', 'height' => '1100px'])
                                 </div>
                             @endforeach
                         </div>

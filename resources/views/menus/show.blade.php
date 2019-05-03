@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row">
+    <div class="row secure">
         {{--@include('nav')--}}
 
         <div class="card">
