@@ -81,7 +81,7 @@
             @else
                 <div class="row">
                     <div class="col-12">
-                        <h4>No menus to display</h4>
+                        <h4>No functions information to display</h4>
                     </div>
                 </div>
             @endif
