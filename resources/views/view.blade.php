@@ -2,13 +2,11 @@
 
 @section('content')
     <div class="" id="page-view">
-
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Views</h1>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <div id="carouselViews" class="carousel slide" data-ride="carousel">
@@ -49,6 +47,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 @endsection

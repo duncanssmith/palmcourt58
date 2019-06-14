@@ -15,7 +15,10 @@
 //    return view('welcome');
 //});
 
-Auth::routes();
+
+// Disable registration
+//Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
 Route::get('/menu', 'HomeController@menu')->name('menu');

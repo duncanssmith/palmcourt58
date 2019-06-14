@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
     <div class="">
         <div class="row justify-content-center" id="page-welcome">
             <div class="row">

@@ -1,24 +1,23 @@
-//@import url(//fonts.googleapis.com/css?family=Open%20Sans:600);
-//@import url(//fonts.googleapis.com/css?family=Lora:400);
-//@import url(//fonts.googleapis.com/css?family=Oswald:400);
-@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT:400);
+@import url(//fonts.googleapis.com/css?family=Open%20Sans);
+@import url(//fonts.googleapis.com/css?family=Lora);
+@import url(//fonts.googleapis.com/css?family=Oswald);
+@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT);
+@import url(//fonts.googleapis.com/css?family=Sofia);
+@import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);
 
 @import "_variables";
 
 html, body {
-  //background-color: rgba(100, 70, 7, 0.8);
-  //background-color: rgba(200, 140, 14, 0.2);
-  //background-color: rgba(255, 255, 255, 0.2);
-  background-color: $duckeggblue;
+  background-color: $duckegg;
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Old Standard TT', sans-serif;
+  font-family: $font;
   font-size: 1em;
   font-weight: 200;
   text-align: left;
-  color: #fff;
+  color: $battleship;
   display: table;
 }
 
@@ -26,7 +25,7 @@ html, body {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  color: rgba(255, 255, 255, 0.7);
+  color: $battleship;
   width: inherit;
 }
 
@@ -37,10 +36,10 @@ html, body {
 
 // HEADINGS, TEXT
 .title {
-  padding: 60px 40px 60px 40px;
-  font-family: 'Oswald', sans-serif;
+  padding: 40px 30px 40px 30px;
+  font-family: $font-header;
   font-weight: 100;
-  font-size: 64px;
+  font-size: 48px;
   background-color: $charcoal;
   color: $clearwhite;
 }
@@ -54,7 +53,7 @@ html, body {
 .address {
   color: $fullwhite;
   background-color: $charcoal;
-  font-family: Old Standard TT;
+  font-family: $font-body;
   font-size: 1.2em;
   line-height: 170%;
   font-weight: 200;
@@ -63,14 +62,14 @@ html, body {
 .address-email {
   color: $fullwhite;
   background-color: $charcoal;
-  font-family: Old Standard TT;
+  font-family:  $font-body;
   font-size: 1em;
   line-height: 100%;
   font-weight: 200;
 }
 
 .opening-times {
-  font-family: Old Standard TT;
+  font-family: $font-body;
   font-size: 1.2em;
   line-height: 170%;
   font-weight: 200;
@@ -96,7 +95,8 @@ html, body {
   color: $charcoal;
 }
 
-.section {
+.secure {
+  font-family: $font-secure;
   position: relative;
   min-height: 900px;
 }
