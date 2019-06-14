@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Menu;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 /**
  * The Menus controller
@@ -70,6 +69,9 @@ class MenusController extends Controller
 
                     $path = "uploads/menus";
                     $uploadedFile = request()->menuImage;
+
+//                    dd($uploadedFile);
+
                     $fileName = sprintf("%s.%s", date('Ymd-His'), $uploadedFile->extension());
 
                     $menu = new Menu();
@@ -148,7 +150,7 @@ class MenusController extends Controller
             $menu->function = request('function') ? 1 : 0;
             $menu->save();
         } else {
-            return redirect('/menu/create')->withErrors();
+            return redirect('/menu/update')->withErrors();
         }
 
         return redirect('/menus');

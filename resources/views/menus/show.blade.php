@@ -3,7 +3,6 @@
 @section('content')
     <div class="row secure">
         {{--@include('nav')--}}
-
         <div class="card">
             <div class="card-header">
                 <h1 class="title">Show menu</h1>

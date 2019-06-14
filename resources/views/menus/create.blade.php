@@ -1,10 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-
     <div class="row secure">
         {{--@include('nav')--}}
-
         <div class="card">
             <div class="card-header">
                 <h1 class="titlex">Create Menu</h1>

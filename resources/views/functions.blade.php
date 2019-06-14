@@ -2,13 +2,11 @@
 
 @section('content')
     <div class="" id="page-functions">
-
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 <h1 class="title">Functions</h1>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
                 @include('partials.text_2')
@@ -20,7 +18,6 @@
                 <h3>Please call us on 01903 212 011 for a quote</h3>
             </div>
         </div>
-
         <div class="row">
             @if (count($functions) > 0)
                 <div class="col-8">
