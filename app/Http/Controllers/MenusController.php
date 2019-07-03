@@ -86,7 +86,8 @@ class MenusController extends Controller
                 }
             }
         } else {
-            return redirect('/menu/create')->withErrors('Error 100 - unable to save uploaded file');
+            return redirect('/menu/create');
+//            ->withErrors('Error 100 - unable to save uploaded file');
         }
 
         return redirect('/menus');
