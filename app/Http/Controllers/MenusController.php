@@ -70,8 +70,6 @@ class MenusController extends Controller
                     $path = "uploads/menus";
                     $uploadedFile = request()->menuImage;
 
-//                    dd($uploadedFile);
-
                     $fileName = sprintf("%s.%s", date('Ymd-His'), $uploadedFile->extension());
 
                     $menu = new Menu();
@@ -86,8 +84,7 @@ class MenusController extends Controller
                 }
             }
         } else {
-            return redirect('/menu/create');
-//            ->withErrors('Error 100 - unable to save uploaded file');
+            return redirect('/menu/create')->withErrors('Error - unable to upload file');
         }
 
         return redirect('/menus');
