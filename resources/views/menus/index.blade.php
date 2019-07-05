@@ -22,6 +22,8 @@
                                 <th>Active</th>
                                 <th>Functions info</th>
                                 <th>Hierarchy</th>
+                                <th>Created</th>
+                                <th>Updated</th>
                                 <th>&nbsp;</th>
                                 <th>&nbsp;</th>
                             </tr>
@@ -57,6 +59,8 @@
                                         @endif
                                     </td>
                                     <td>{{ $menu->hierarchy }}</td>
+                                    <td>{{ $menu->created_at }}</td>
+                                    <td>{{ $menu->updated_at }}</td>
                                     <td><a href="/menus/{{ $menu->id }}" class="btn btn-sm btn-outline-info">Show</a></td>
                                     <td><a href="/menus/{{ $menu->id }}/edit" class="btn btn-sm btn-outline-success">Edit</a></td>
                                 </tr>
