@@ -1,2 +1,2 @@
-<a href="/document" class="btn btn-outline-info btn-sm" aria-label="Document list"><i class="fa fa-list"></i> Documents</a>
-<a href="/document/create" class="btn btn-outline-info btn-sm" aria-label="Add a new Document"><i class="fa fa-plus"></i> Add </a>
+<a href="/menu" class="btn btn-outline-info btn-sm" aria-label="Menu list"><i class="fa fa-list"></i> Menus</a>
+<a href="/menu/create" class="btn btn-outline-info btn-sm" aria-label="Add a new Menu"><i class="fa fa-plus"></i> Add </a>

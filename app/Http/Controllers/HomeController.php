@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use App\Menu;
 
 class HomeController extends Controller
@@ -23,7 +24,14 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-        return view('welcome');
+        $welcome = Document::where([['active', '=', '0'], ['title', 'like', '%Welcome%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+        $opening = Document::where([['active', '=', '0'], ['title', 'like', '%OpeningTime%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('welcome', ['welcome' => $welcome, 'opening' => $opening]);
     }
 
     /**

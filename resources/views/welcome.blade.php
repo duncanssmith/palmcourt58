@@ -12,7 +12,14 @@
 
             <div class="row">
                 <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                    @include('partials.text_1')
+{{--                    @include('partials.text_1')--}}
+                    <p class="float-text-main">
+                    @foreach($welcome as $wc)
+                            {!! $wc->content !!}
+{{--                    {{ $welcomeTexts[1] }}--}}
+{{--                    {{ $welcomeTexts[2] }}--}}
+                     @endforeach
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -22,7 +29,15 @@
             </div>
             <div class="row">
                 <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                    @include('partials.opening_times')
+{{--                    @include('partials.opening_times')--}}
+                    <div class="opening-times">
+                        <h1>Opening times</h1>
+                        <p class="float-text">
+                    @foreach($opening as $op)
+                        {!! $op->content !!}
+                    @endforeach
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

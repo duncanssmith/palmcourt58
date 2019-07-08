@@ -10,7 +10,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        @include('links')
+                        @include('document.links')
                     </div>
                 </div>
                 <div class="row">

@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="row">
                         <div class="col-12">
-                            @include('links')
+                            @include('menu.links')
                         </div>
                     </div>
                     <div class="col-12">
