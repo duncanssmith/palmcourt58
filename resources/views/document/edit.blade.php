@@ -5,23 +5,19 @@
         {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
-                <h1 class="title">Edit Document</h1>
+                <h1 class="title">Edit document</h1>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <form method="POST" action="/documents/{{ $document->id }}" enctype="multipart/form-data">
+                        @include('links')
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form method="POST" action="/document/{{ $document->id }}">
                             @csrf
                             @method('PATCH')
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="image" class="pull-right">Image</label>
-                                </div>
-                                <div class="col-9">
-                                    @include('layouts.image_show_field', ['document' => $document, 'width' => '40%', 'height' => '400px'])
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-3">
@@ -38,28 +34,6 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="function" class="pull-right">Is functions?</label>
-                                </div>
-                                <div class="col-9">
-                                    @if ($document->function)
-                                        <input type="checkbox" name="function" placeholder="active" checked>
-                                    @else
-                                        <input type="checkbox" name="function" placeholder="active">
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <label for="image" class="pull-right">New image</label>
-                                </div>
-                                <div class="col-9">
-                                    @include('layouts.image_upload_field', ['create' => 0])
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
                                     <label for="title" class="pull-right">Title</label>
                                 </div>
                                 <div class="col-9">
@@ -69,10 +43,12 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="description" class="pull-right">Description</label>
+                                    <label for="content" class="pull-right">Content</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" name="description" placeholder="description" value="{{ $document->description }}" />
+                                    <textarea name="content" class="ckeditor" placeholder="content" value="{{ $document->content }}">
+                                        {{ $document->content }}
+                                    </textarea>
                                 </div>
                             </div>
 
@@ -122,7 +98,7 @@
                                         <h3>Are you sure you want to delete {{ $document->title }}?</h3>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="POST" action="/documents/{{ $document->id }}">
+                                        <form method="POST" action="/document/{{ $document->id }}">
                                             @csrf
                                             @method('DELETE')
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

@@ -31,13 +31,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function menu()
+    public function menus()
     {
         $menus = Menu::where([['active', '=', '1'], ['function', '=', '0']])
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('menu', ['menus' => $menus]);
+        return view('menus', ['menus' => $menus]);
     }
 
     /**

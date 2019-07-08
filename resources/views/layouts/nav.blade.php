@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-1">
                     <li class="nav-item"><a href="/" class="nav-link header-link">Welcome</a></li>
-                    <li class="nav-item"><a href="/menu" class="nav-link header-link">Menu</a></li>
+                    <li class="nav-item"><a href="/menus" class="nav-link header-link">Menu</a></li>
                     <li class="nav-item"><a href="/views" class="nav-link header-link">Views</a></li>
                     <li class="nav-item"><a href="/functions" class="nav-link header-link">Functions</a></li>
                     <li class="nav-item"><a href="/about" class="nav-link header-link">About us</a></li>
@@ -58,8 +58,10 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/home" ><i class="fa fa-home"></i> Home</a>
-                                <a class="dropdown-item" href="/menus" ><i class="fa fa-list"></i> List menus</a>
-                                <a class="dropdown-item" href="/menus/create" ><i class="fa fa-plus"></i> Add menu</a>
+                                <a class="dropdown-item" href="/menu" ><i class="fa fa-list"></i> List menus</a>
+                                <a class="dropdown-item" href="/menu/create" ><i class="fa fa-plus"></i> Add menu</a>
+                                <a class="dropdown-item" href="/document" ><i class="fa fa-list"></i> List documents</a>
+                                <a class="dropdown-item" href="/document/create" ><i class="fa fa-plus"></i> Add document</a>
                                 {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
                                     {{--onclick="event.preventDefault();--}}
                                     {{--document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>--}}

@@ -5,23 +5,18 @@
         {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
-                <h1 class="titlex">Create Document</h1>
+                <h1 class="title">Create document</h1>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <form method="POST" action="/documents" enctype="multipart/form-data">
+                        @include('links')
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form method="POST" action="/document">
                             @csrf
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="image" class="pull-right">Image</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--@include('layouts.image_upload_field', ['create' => 1])--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-
                             <div class="row">
                                 <div class="col-3">
                                     <label for="title" class="pull-right">Title</label>
@@ -36,7 +31,9 @@
                                     <label for="content" class="pull-right">Content</label>
                                 </div>
                                 <div class="col-9">
-                                    <textarea name="content" placeholder="content" value="{{old('content')}}"></textarea>
+                                    <textarea name="content" class="ckeditor" placeholder="content" value="{{old('content')}}">
+                                        {{ old('content') }}
+                                    </textarea>
                                 </div>
                             </div>
 
@@ -48,15 +45,6 @@
                                     <input type="checkbox" name="active" placeholder="active" >
                                 </div>
                             </div>
-
-                            {{--<div class="row">--}}
-                                {{--<div class="col-3">--}}
-                                    {{--<label for="function" class="pull-right">Is function?</label>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-9">--}}
-                                    {{--<input type="checkbox" name="function" placeholder="function" >--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
 
                             <div class="row">
                                 <div class="col-3">

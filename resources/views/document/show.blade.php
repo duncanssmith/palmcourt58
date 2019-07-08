@@ -5,9 +5,14 @@
         {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
-                <h1 class="title">Show menu</h1>
+                <h1 class="title">Show document</h1>
             </div>
             <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        @include('links')
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
@@ -15,34 +20,16 @@
                                 <label for="title" class="pull-right">Title</label>
                             </div>
                             <div class="col-9">
-                                {{ $menu->title }}
+                                {{ $document->title }}
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-3">
-                                <label for="image" class="pull-right">Image</label>
+                                <label for="description" class="pull-right">Content</label>
                             </div>
                             <div class="col-9">
-                                @include('layouts.image_show_field', ['menu' => $menu, 'width' => '100%', 'height' => '1200px'])
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="extension" class="pull-right">Extension</label>
-                            </div>
-                            <div class="col-9">
-                                @include('layouts.file_extension_badge', ['menu' => $menu])
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="description" class="pull-right">Description</label>
-                            </div>
-                            <div class="col-9">
-                                {{ $menu->description }}
+                                {{ $document->content }}
                             </div>
                         </div>
 
@@ -51,20 +38,7 @@
                                 <label for="active" class="pull-right">Is active?</label>
                             </div>
                             <div class="col-9">
-                                @if ($menu->active == 1)
-                                    <i class="fa fa-check text-success"></i>
-                                @else
-                                    <i class="fa fa-times text-danger"></i>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="function" class="pull-right">Is function?</label>
-                            </div>
-                            <div class="col-9">
-                                @if ($menu->function == 1)
+                                @if ($document->active == 1)
                                     <i class="fa fa-check text-success"></i>
                                 @else
                                     <i class="fa fa-times text-danger"></i>
@@ -77,7 +51,7 @@
                                 <label for="hierarchy" class="pull-right">Hierarchy</label>
                             </div>
                             <div class="col-9">
-                                {{ $menu->hierarchy }}
+                                {{ $document->hierarchy }}
                             </div>
                         </div>
 
@@ -86,7 +60,7 @@
                                 &nbsp;
                             </div>
                             <div class="col-9">
-                                <a class="btn btn-outline-info btn-sm" href="/menus/{{ $menu->id }}/edit">Edit</a>
+                                <a class="btn btn-outline-info btn-sm" href="/documents/{{ $document->id }}/edit">Edit</a>
                             </div>
                         </div>
                     </div>

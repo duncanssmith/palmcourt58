@@ -5,22 +5,22 @@
         {{--@include('nav')--}}
         <div class="card">
             <div class="card-header">
-                <h1 class="title">Menu list</h1>
+                <h1 class="title">Document list</h1>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-1">&nbsp;</div>
+                    <div class="col-12">
+                        @include('links')
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-10">
                         <table class="table table-hover table-light">
                         <thead>
                             <tr>
-                                <th>Image</th>
-                                <th>Path</th>
-                                <th>File type</th>
                                 <th>Title</th>
-                                <th>Description</th>
+                                <th>Content</th>
                                 <th>Active</th>
-                                <th>Functions info</th>
                                 <th>Hierarchy</th>
                                 <th>Created</th>
                                 <th>Updated</th>
@@ -29,40 +29,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($menus as $menu)
+                            @foreach ($documents as $document)
                                 <tr>
+                                    <td>{{ $document->title }}</td>
+                                    <td>{{ $document->content }}</td>
                                     <td>
-                                        <a href="/menus/{{ $menu->id }}">
-                                            @include('layouts.image_show_field', ['menu' => $menu, 'width' => '95px', 'height' => '140px'])
-                                        </a>
-                                    </td>
-                                    <td>
-                                        {{ $menu->path }}
-                                    </td>
-                                    <td>
-                                        @include('layouts.file_extension_badge', ['menu' => $menu])
-                                    </td>
-                                    <td>{{ $menu->title }}</td>
-                                    <td>{{ $menu->description }}</td>
-                                    <td>
-                                        @if ($menu->active == 1)
+                                        @if ($document->active == 1)
                                             <i class="fa fa-check text-success"></i>
                                         @else
                                             <i class="fa fa-times text-danger"></i>
                                         @endif
                                     </td>
-                                    <td>
-                                        @if ($menu->function == 1)
-                                            <i class="fa fa-check text-success"></i>
-                                        @else
-                                            <i class="fa fa-times text-danger"></i>
-                                        @endif
-                                    </td>
-                                    <td>{{ $menu->hierarchy }}</td>
-                                    <td>{{ $menu->created_at }}</td>
-                                    <td>{{ $menu->updated_at }}</td>
-                                    <td><a href="/menus/{{ $menu->id }}" class="btn btn-sm btn-outline-info">Show</a></td>
-                                    <td><a href="/menus/{{ $menu->id }}/edit" class="btn btn-sm btn-outline-success">Edit</a></td>
+                                    <td>{{ $document->hierarchy }}</td>
+                                    <td>{{ $document->created_at }}</td>
+                                    <td>{{ $document->updated_at }}</td>
+                                    <td><a href="/document/{{ $document->id }}" class="btn btn-sm btn-outline-info">Show</a></td>
+                                    <td><a href="/document/{{ $document->id }}/edit" class="btn btn-sm btn-outline-success">Edit</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -72,7 +54,7 @@
             </div>
 
             <div class="card-footer">
-                {{ $menus->links() }}
+                {{ $documents->links() }}
             </div>
         </div>
     </div>
