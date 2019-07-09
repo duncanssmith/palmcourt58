@@ -11,17 +11,23 @@
             <div class="col-lg-5 col-md-4 col-sm-4 col-xs-3">
                 @include('partials.address')
             </div>
-            {{--<div class="col-lg-8 col-md-5 col-sm-4 col-xs-3">--}}
+        </div>
+        <div class="row">
             <div class="col-lg-7 col-md-8 col-sm-8 col-xs-4">
-                 @include('partials.text_4')
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-                 @include('partials.text_5')
+                @foreach($about as $abouta)
+                    {!! $abouta->content !!}
+                @endforeach
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3">
-                @include('partials.opening_times')
+{{--                @include('partials.opening_times')--}}
+                <div class="opening-times">
+                    <h1>Opening times</h1>
+                @foreach($opening as $op)
+                    {!! $op->content !!}
+                @endforeach
+                </div>
             </div>
         </div>
         <div class="row">

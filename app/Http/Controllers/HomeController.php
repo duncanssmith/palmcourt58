@@ -24,10 +24,10 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-        $welcome = Document::where([['active', '=', '0'], ['title', 'like', '%Welcome%']])
+        $welcome = Document::where([['active', '=', '1'], ['title', 'like', '%Welcome%']])
             ->orderBy('hierarchy', 'asc')
             ->get();
-        $opening = Document::where([['active', '=', '0'], ['title', 'like', '%OpeningTime%']])
+        $opening = Document::where([['active', '=', '1'], ['title', 'like', '%OpeningTime%']])
             ->orderBy('hierarchy', 'asc')
             ->get();
 
@@ -80,7 +80,11 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('functions', ['functions' => $functions]);
+        $documents = Document::where([['active', '=', '1'], ['title', 'like', '%Functions%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('functions', ['functions' => $functions, 'documents' => $documents]);
     }
 
     /**
@@ -90,7 +94,15 @@ class HomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        $opening = Document::where([['active', '=', '1'], ['title', 'like', '%OpeningTime%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        $about = Document::where([['active', '=', '1'], ['title', 'like', '%About%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('about', ['about' => $about, 'opening' => $opening]);
     }
 
     /**

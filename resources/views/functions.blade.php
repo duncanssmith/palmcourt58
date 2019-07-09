@@ -9,14 +9,20 @@
         </div>
         <div class="row">
             <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                @include('partials.text_2')
+                {{--@include('partials.text_2')--}}
+
+                <div class="float-text-main">
+                    @foreach($documents as $doc)
+                        {!! $doc->content !!}
+                    @endforeach
+                </div>
             </div>
-            <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                @include('partials.text_3')
-            </div>
-            <div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">
-                <h3>Please call us on 01903 212 011 for a quote</h3>
-            </div>
+            {{--<div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">--}}
+{{--                @include('partials.text_3')--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-10 col-md-8 col-sm-6 col-xs-3">--}}
+                {{--<h3>Please call us on 01903 212 011 for a quote</h3>--}}
+            {{--</div>--}}
         </div>
         <div class="row">
             @if (count($functions) > 0)
@@ -78,7 +84,7 @@
             @else
                 <div class="row">
                     <div class="col-12">
-                        <h4>No functions information to display</h4>
+                        <h4>No functions information</h4>
                     </div>
                 </div>
             @endif

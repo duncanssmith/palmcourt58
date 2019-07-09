@@ -16,8 +16,6 @@
                     <p class="float-text-main">
                     @foreach($welcome as $wc)
                             {!! $wc->content !!}
-{{--                    {{ $welcomeTexts[1] }}--}}
-{{--                    {{ $welcomeTexts[2] }}--}}
                      @endforeach
                     </p>
                 </div>
