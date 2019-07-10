@@ -34,7 +34,7 @@
                                 @foreach ($documents as $document)
                                     <tr>
                                         <td>{{ $document->title }}</td>
-                                        <td>{{ $document->content }}</td>
+                                        <td>{!! $document->content !!}</td>
                                         <td>
                                             @if ($document->active == 1)
                                                 <i class="fa fa-check text-success"></i>

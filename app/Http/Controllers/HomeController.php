@@ -31,7 +31,7 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('welcome', ['welcome' => $welcome, 'opening' => $opening]);
+        return view('public.welcome', ['welcome' => $welcome, 'opening' => $opening]);
     }
 
     /**
@@ -45,7 +45,7 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('menus', ['menus' => $menus]);
+        return view('public.menus', ['menus' => $menus]);
     }
 
     /**
@@ -66,7 +66,7 @@ class HomeController extends Controller
             "media/images/aInteriorSpace-2.jpg",
         ];
 
-        return view('view', ['images' => $images]);
+        return view('public.view', ['images' => $images]);
     }
 
     /**
@@ -84,7 +84,7 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('functions', ['functions' => $functions, 'documents' => $documents]);
+        return view('public.functions', ['functions' => $functions, 'documents' => $documents]);
     }
 
     /**
@@ -102,7 +102,7 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('about', ['about' => $about, 'opening' => $opening]);
+        return view('public.about', ['about' => $about, 'opening' => $opening]);
     }
 
     /**
@@ -112,6 +112,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('public.home');
     }
 }

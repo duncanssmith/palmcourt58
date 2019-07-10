@@ -71,7 +71,7 @@
                                     &nbsp;
                                 </div>
                                 <div class="col-9">
-                                    <a class="btn btn-outline-info btn-sm" href="/documents/{{ $document->id }}/edit">Edit</a>
+                                    <a class="btn btn-outline-info btn-sm" href="/document/{{ $document->id }}/edit">Edit</a>
                                 </div>
                             </div>
                         </div>
