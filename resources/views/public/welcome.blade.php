@@ -4,12 +4,12 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-10">
+            <div class="col-lg-10">
 
                 <h1 class="title">Palm Court Pavilion </h1>
 
                 <div class="opening-times">
-                    <h1>Opening times</h1>
+                    <h2>Opening times</h2>
                     @foreach($opening as $op)
                         {!! $op->content !!}
                     @endforeach

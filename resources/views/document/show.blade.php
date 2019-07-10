@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center">
         {{--@include('nav')--}}
-        <div class="col-8">
+        <div class="col-lg-8">
 
             <div class="card">
                 <div class="card-header">

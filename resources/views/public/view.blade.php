@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-10">
+        <div class="col-lg-10">
             <h1 class="title">Views</h1>
 
             <div id="carouselViews" class="carousel slide" data-ride="carousel">
