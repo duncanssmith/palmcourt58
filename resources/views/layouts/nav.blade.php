@@ -57,10 +57,10 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/home" ><i class="fa fa-home"></i> Home</a>
-                                <a class="dropdown-item" href="/menu" ><i class="fa fa-list"></i> List menus</a>
+                                <a class="dropdown-item" href="/home" ><i class="fa fa-dashboard"></i> Dashboard</a>
+                                <a class="dropdown-item" href="/menu" ><i class="fa fa-list"></i> Menu list </a>
                                 <a class="dropdown-item" href="/menu/create" ><i class="fa fa-plus"></i> Add menu</a>
-                                <a class="dropdown-item" href="/document" ><i class="fa fa-list"></i> List documents</a>
+                                <a class="dropdown-item" href="/document" ><i class="fa fa-list"></i> Document list </a>
                                 <a class="dropdown-item" href="/document/create" ><i class="fa fa-plus"></i> Add document</a>
                                 {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
                                     {{--onclick="event.preventDefault();--}}
