@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Open%20Sans);@import url(//fonts.googleapis.com/css?family=Lora);@import url(//fonts.googleapis.com/css?family=Oswald);@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT);@import url(//fonts.googleapis.com/css?family=Sofia);@import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);html,
+@import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);html,
 body {
   background-color: #aacccc;
   height: 100%;
@@ -9,7 +9,7 @@ body {
   font-size: 1em;
   font-weight: 200;
   text-align: left;
-  color: rgba(110, 110, 110, 0.9);
+  color: rgba(0, 0, 0, 0.45);
   display: table;
 }
 
@@ -138,44 +138,22 @@ h6 {
 }
 
 #page-welcome {
-  padding-top: 40px;
-  background: #333 url("/public/media/images/aMainFront-5.jpg") no-repeat center center;
+  background: rgba(255, 255, 255, 0.95) url("/media/images/aMainFront-2.jpg") no-repeat center center;
   background-size: cover;
-  color: white;
-  font-size: 1em;
-  font-weight: normal;
 }
 
 #page-about {
-  padding-top: 40px;
-  text-align: left;
-  background: #282828 url("/public/media/images/gCoffeeMachine.jpg") no-repeat center center;
-  /*background: #282828;*/
+  background: rgba(255, 255, 255, 0.95) url("/media/images/gCoffeeMachine.jpg") no-repeat center center;
   background-size: cover;
-  color: white;
 }
 
 #page-functions {
-  padding-top: 40px;
-  background: #282828 url("/public/media/images/gQuartet.jpg") no-repeat center center;
+  background: rgba(255, 255, 255, 0.95) url("/media/images/gQuartet.jpg") no-repeat center center;
   background-size: cover;
-  color: white;
-  font-size: 1em;
-  font-weight: normal;
-}
-
-#page-views {
-  padding-top: 40px;
-  background: #282828 url("/public/media/images/aInteriorSpace-1.jpg") no-repeat center center;
-  /*background: #282828;*/
-  background-size: cover;
-  color: white;
 }
 
 #page-menu {
-  padding-top: 40px;
-  background: #282828 url("/public/media/images/gOffer1.jpg") no-repeat center center;
-  /*background: #282828;*/
+  background: rgba(255, 255, 255, 0.95) url("/media/images/gOffer1.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -188,7 +166,7 @@ h6 {
 }
 
 .top-photo {
-  background: #eee url("/storage/media/images/gOffer1.jpg") no-repeat center center;
+  background: #eee url("/public/media/images/gOffer1.jpg") no-repeat center center;
   /*background: #282828;*/
   min-height: 285px;
   background-size: cover;
@@ -223,7 +201,7 @@ section.flat > .container > .photo-float {
 }
 
 .photo-float {
-  background: #ddd url("/media/images/gQuartet.jpg") no-repeat center center;
+  background: #ddd url("/public/media/images/gQuartet.jpg") no-repeat center center;
 }
 
 p.float-text-main {

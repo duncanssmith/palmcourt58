@@ -1,13 +1,13 @@
 <div class="row justify-content-center">
     <div class="col-10">
         <div class="row">
-            <div class="col-4">
-                <small>&copy; copyright {{ date('Y') }}</small>
+            <div class="col-4 pull-left">
+                <small>&copy; Copyright {{ date('Y') }}</small>
             </div>
-            <div class="col-4">
+            <div class="col-4 justify-content-center">
                 <small>Palm Court Pavilion</small>
             </div>
-            <div class="col-4">
+            <div class="col-4 pull-right">
                 <small>All rights reserved</small>
             </div>
         </div>

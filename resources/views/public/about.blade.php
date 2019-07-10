@@ -2,7 +2,7 @@
 
 @section('content')
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="page-about">
 
             <div class="col-lg-10">
 

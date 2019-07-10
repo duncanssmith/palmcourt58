@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="page-views">
         <div class="col-lg-10">
             <h1 class="title">Views</h1>
 

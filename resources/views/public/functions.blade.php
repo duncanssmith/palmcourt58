@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row justify-content-center">
+    <div class="row justify-content-center " id="page-functions">
 
         <div class="col-lg-10">
 
