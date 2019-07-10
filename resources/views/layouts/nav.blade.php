@@ -53,7 +53,6 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link header-link nav-link-secure dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
-                                {{--<i class="fa fa-user"></i>--}}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -62,11 +61,12 @@
                                 <a class="dropdown-item" href="/menu/create" ><i class="fa fa-plus"></i> Add menu</a>
                                 <a class="dropdown-item" href="/document" ><i class="fa fa-list"></i> Document list </a>
                                 <a class="dropdown-item" href="/document/create" ><i class="fa fa-plus"></i> Add document</a>
-                                {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
-                                    {{--onclick="event.preventDefault();--}}
-                                    {{--document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>--}}
-                                    {{--{{ __('Logout') }}--}}
-                                {{--</a>--}}
+                                {{--<a class="dropdown-item" href="/logout" ><i class="fa fa-lock"></i> Logout</a>--}}
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();" title="logout">
+                                    <i class="fa fa-lock"></i> Logout
+                                </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
