@@ -16,7 +16,7 @@
                         </div>
                     @endif
 
-                    @include('nav')
+                    @include('public.nav')
 
                 </div>
             </div>
