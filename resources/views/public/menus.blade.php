@@ -10,7 +10,7 @@
 
                 <div class="row">
                     @if (count($menus) > 0)
-                        <div class="col-8">
+                        <div class="col-lg-8">
                             <div id="carouselMenus" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @for ($i = 0; $i < count($menus); $i++)
@@ -48,7 +48,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div id="menusDownloads">
                                 <ul class="list-group">
                                     <li class="list-group-item">

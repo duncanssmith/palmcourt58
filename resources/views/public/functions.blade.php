@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row justify-content-center " id="page-functions">
+    <div class="row justify-content-center" id="page-functions">
 
         <div class="col-lg-10">
 
@@ -13,7 +13,7 @@
 
                 @if (count($functions) > 0)
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-lg-8">
                             <div id="carouselMenus" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @for ($i = 0; $i < count($functions); $i++)
@@ -37,7 +37,7 @@
                                             @endphp
                                         @endif
                                         <div class="carousel-item {{$isActive}}">
-                                            @include('layouts.image_show_field', ['menu' => $function, 'width' => '100%', 'height' => '1200px'])
+                                            @include('layouts.image_show_field', ['menu' => $function, 'width' => '90%', 'height' => '1100px'])
                                         </div>
                                     @endforeach
                                 </div>
@@ -51,7 +51,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4">
                             <div id="menusDownloads">
                                 <ul class="list-group">
                                     <li class="list-group-item">
@@ -72,7 +72,7 @@
 
                 @else
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-lg-12">
                             <h4>No functions information</h4>
                         </div>
                     </div>
