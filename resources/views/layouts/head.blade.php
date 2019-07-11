@@ -27,5 +27,7 @@
     <script src="{{ asset('js/app.js') }}" ></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+    {{--<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>--}}
+    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 
 </head>

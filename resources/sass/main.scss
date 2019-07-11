@@ -1,8 +1,8 @@
-@import url(//fonts.googleapis.com/css?family=Open%20Sans);
-@import url(//fonts.googleapis.com/css?family=Lora);
-@import url(//fonts.googleapis.com/css?family=Oswald);
-@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT);
-@import url(//fonts.googleapis.com/css?family=Sofia);
+//@import url(//fonts.googleapis.com/css?family=Open%20Sans);
+//@import url(//fonts.googleapis.com/css?family=Lora);
+//@import url(//fonts.googleapis.com/css?family=Oswald);
+//@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT);
+//@import url(//fonts.googleapis.com/css?family=Sofia);
 @import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);
 
 @import "_variables";
@@ -17,7 +17,7 @@ html, body {
   font-size: 1em;
   font-weight: 200;
   text-align: left;
-  color: $battleship;
+  color: $charcoal;
   display: table;
 }
 
@@ -76,12 +76,12 @@ html, body {
 }
 
 .opening-times > p {
-  color: $fullwhite;
-  background-color: $charcoal;
+  color: $clearwhite;
+  background-color: $midgrey;
 }
 
 .opening-times > h1,h2,h3,h4,h5,h6 {
-  background: $fullwhite;
+  background-color: $clearwhite;
   color: $charcoal;
   margin: 10px;
   padding: 10px;
@@ -141,44 +141,27 @@ html, body {
 }
 
 #page-welcome {
-  padding-top: 40px;
-  background: #333 url('/public/media/images/aMainFront-5.jpg') no-repeat center center;
+  background: $clearwhite url('/media/images/aMainFront-2.jpg') no-repeat center center;
   background-size: cover;
-  color: $fullwhite;
-  font-size: 1.0em;
-  font-weight: normal;
 }
 
 #page-about {
-  padding-top: 40px;
-  text-align: left;
-  background: #282828 url('/public/media/images/gCoffeeMachine.jpg') no-repeat center center;
-  /*background: #282828;*/
+  background: $clearwhite url('/media/images/gCoffeeMachine.jpg') no-repeat center center;
   background-size: cover;
-  color: $fullwhite;
 }
 
 #page-functions {
-  padding-top: 40px;
-  background: #282828 url('/public/media/images/gQuartet.jpg') no-repeat center center;
+  background: $clearwhite url('/media/images/gQuartet.jpg') no-repeat center center;
   background-size: cover;
-  color: $fullwhite;
-  font-size: 1.0em;
-  font-weight: normal;
 }
 
-#page-views {
-  padding-top: 40px;
-  background: #282828 url('/public/media/images/aInteriorSpace-1.jpg') no-repeat center center;
-  /*background: #282828;*/
-  background-size: cover;
-  color:  $fullwhite;
-}
+//#page-views {
+//  background: $clearwhite url('/media/images/aInteriorSpace-1.jpg') no-repeat center center;
+//  background-size: cover;
+//}
 
 #page-menu {
-  padding-top: 40px;
-  background: #282828 url('/public/media/images/gOffer1.jpg') no-repeat center center;
-  /*background: #282828;*/
+  background: $clearwhite url('/media/images/gOffer1.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -191,7 +174,7 @@ html, body {
 }
 
 .top-photo {
-  background: #eee url('/storage/media/images/gOffer1.jpg') no-repeat center center;
+  background: #eee url('/public/media/images/gOffer1.jpg') no-repeat center center;
   /*background: #282828;*/
   min-height: 285px;
   background-size: cover;
@@ -224,7 +207,7 @@ section.flat {
 }
 
 .photo-float {
-  background: #ddd url('/media/images/gQuartet.jpg') no-repeat center center;
+  background: #ddd url('/public/media/images/gQuartet.jpg') no-repeat center center;
 }
 
 p {

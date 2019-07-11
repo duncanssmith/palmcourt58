@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Document;
 use App\Menu;
 
 class HomeController extends Controller
@@ -13,7 +14,9 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        // $this->middleware('auth');
+        // $this->middleware('auth')->except(['index']);
+         $this->middleware('auth')->only(['index']);
     }
 
     /**
@@ -23,7 +26,14 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-        return view('welcome');
+        $welcome = Document::where([['active', '=', '1'], ['title', 'like', '%Welcome%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+        $opening = Document::where([['active', '=', '1'], ['title', 'like', '%OpeningTime%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('public.welcome', ['welcome' => $welcome, 'opening' => $opening]);
     }
 
     /**
@@ -31,13 +41,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function menu()
+    public function menus()
     {
         $menus = Menu::where([['active', '=', '1'], ['function', '=', '0']])
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('menu', ['menus' => $menus]);
+        return view('public.menus', ['menus' => $menus]);
     }
 
     /**
@@ -58,7 +68,7 @@ class HomeController extends Controller
             "media/images/aInteriorSpace-2.jpg",
         ];
 
-        return view('view', ['images' => $images]);
+        return view('public.view', ['images' => $images]);
     }
 
     /**
@@ -72,7 +82,11 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('functions', ['functions' => $functions]);
+        $documents = Document::where([['active', '=', '1'], ['title', 'like', '%Functions%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('public.functions', ['functions' => $functions, 'documents' => $documents]);
     }
 
     /**
@@ -82,7 +96,15 @@ class HomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        $opening = Document::where([['active', '=', '1'], ['title', 'like', '%OpeningTime%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        $about = Document::where([['active', '=', '1'], ['title', 'like', '%About%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('public.about', ['about' => $about, 'opening' => $opening]);
     }
 
     /**
@@ -92,6 +114,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('public.home');
     }
 }

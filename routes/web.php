@@ -21,10 +21,11 @@
 Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::get('/menu', 'HomeController@menu')->name('menu');
+Route::get('/menus', 'HomeController@menus')->name('menus');
 Route::get('/views', 'HomeController@view')->name('view');
 Route::get('/functions', 'HomeController@functions')->name('functions');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('menus', 'MenusController');
+Route::resource('menu', 'MenuController');
+Route::resource('document', 'DocumentController');

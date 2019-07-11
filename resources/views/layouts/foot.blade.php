@@ -1,19 +1,17 @@
-<div class="row">
-    <div class="col-4">&nbsp;</div>
-    <div class="col-4">
+<div class="row justify-content-center">
+    <div class="col-10">
         <div class="row">
-            <div class="col-4">
-                <small>&copy; copyright {{ date('Y') }}</small>
+            <div class="col-4 pull-left">
+                <small>&copy; Copyright {{ date('Y') }}</small>
             </div>
-            <div class="col-4">
-                &nbsp;
+            <div class="col-4 justify-content-center">
+                <small>Palm Court Pavilion</small>
             </div>
-            <div class="col-4">
+            <div class="col-4 pull-right">
                 <small>All rights reserved</small>
             </div>
         </div>
     </div>
-    <div class="col-4">&nbsp;</div>
 </div>
 
 {{-- BOOTSTRAP JS 4.3.1 START --}}

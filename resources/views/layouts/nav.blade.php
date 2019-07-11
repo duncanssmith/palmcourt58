@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mt-1">
                     <li class="nav-item"><a href="/" class="nav-link header-link">Welcome</a></li>
-                    <li class="nav-item"><a href="/menu" class="nav-link header-link">Menu</a></li>
+                    <li class="nav-item"><a href="/menus" class="nav-link header-link">Menu</a></li>
                     <li class="nav-item"><a href="/views" class="nav-link header-link">Views</a></li>
                     <li class="nav-item"><a href="/functions" class="nav-link header-link">Functions</a></li>
                     <li class="nav-item"><a href="/about" class="nav-link header-link">About us</a></li>
@@ -53,18 +53,20 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link header-link nav-link-secure dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
-                                {{--<i class="fa fa-user"></i>--}}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/home" ><i class="fa fa-home"></i> Home</a>
-                                <a class="dropdown-item" href="/menus" ><i class="fa fa-list"></i> List menus</a>
-                                <a class="dropdown-item" href="/menus/create" ><i class="fa fa-plus"></i> Add menu</a>
-                                {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
-                                    {{--onclick="event.preventDefault();--}}
-                                    {{--document.getElementById('logout-form').submit();"><i class="fa fa-user"></i>--}}
-                                    {{--{{ __('Logout') }}--}}
-                                {{--</a>--}}
+                                <a class="dropdown-item" href="/home" ><i class="fa fa-dashboard"></i> Dashboard</a>
+                                <a class="dropdown-item" href="/menu" ><i class="fa fa-list"></i> Menu list </a>
+                                <a class="dropdown-item" href="/menu/create" ><i class="fa fa-plus"></i> Add menu</a>
+                                <a class="dropdown-item" href="/document" ><i class="fa fa-list"></i> Document list </a>
+                                <a class="dropdown-item" href="/document/create" ><i class="fa fa-plus"></i> Add document</a>
+                                {{--<a class="dropdown-item" href="/logout" ><i class="fa fa-lock"></i> Logout</a>--}}
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();" title="logout">
+                                    <i class="fa fa-lock"></i> Logout
+                                </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
