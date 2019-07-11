@@ -14,7 +14,7 @@
                 @if (count($functions) > 0)
                     <div class="row">
                         <div class="col-lg-8">
-                            <div id="carouselMenus" class="carousel slide" data-ride="carousel">
+                            <div id="carouselMenus" class="carousel slide carousel-container" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @for ($i = 0; $i < count($functions); $i++)
                                         @if ($i == 0)

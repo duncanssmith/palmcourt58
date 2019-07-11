@@ -11,7 +11,7 @@
                 <div class="row">
                     @if (count($menus) > 0)
                         <div class="col-lg-8">
-                            <div id="carouselMenus" class="carousel slide" data-ride="carousel">
+                            <div id="carouselMenus" class="carousel slide carousel-container" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @for ($i = 0; $i < count($menus); $i++)
                                         @if ($i == 0)
