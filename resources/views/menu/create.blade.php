@@ -67,6 +67,15 @@
 
                                 <div class="row">
                                     <div class="col-3">
+                                        <label for="function" class="pull-right">Is banner?</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <input type="checkbox" name="banner" placeholder="banner" >
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-3">
                                         <label for="hierarchy" class="pull-right">Hierarchy</label>
                                     </div>
                                     <div class="col-9">

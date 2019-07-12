@@ -32,7 +32,7 @@
 
                                 <div class="row">
                                     <div class="col-3">
-                                        <label for="active" class="pull-right">Is active?</label>
+                                        <label for="active" class="pull-right">Active?</label>
                                     </div>
                                     <div class="col-9">
                                         @if ($menu->active)
@@ -45,13 +45,26 @@
 
                                 <div class="row">
                                     <div class="col-3">
-                                        <label for="function" class="pull-right">Is functions?</label>
+                                        <label for="function" class="pull-right">Function?</label>
                                     </div>
                                     <div class="col-9">
                                         @if ($menu->function)
                                             <input type="checkbox" name="function" placeholder="active" checked>
                                         @else
                                             <input type="checkbox" name="function" placeholder="active">
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <label for="banner" class="pull-right">Banner?</label>
+                                    </div>
+                                    <div class="col-9">
+                                        @if ($menu->banner)
+                                            <input type="checkbox" name="banner" placeholder="active" checked>
+                                        @else
+                                            <input type="checkbox" name="banner" placeholder="active">
                                         @endif
                                     </div>
                                 </div>

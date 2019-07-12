@@ -14,6 +14,7 @@ class Menu extends Model
         'description',
         'active',
         'function',
+        'banner',
         'hierarchy',
     ];
 }

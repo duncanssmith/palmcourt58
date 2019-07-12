@@ -3,7 +3,6 @@
 @section('content')
 
         <div class="row justify-content-center" id="page-menu">
-
             <div class="col-lg-10">
 
                 <h1 class="title">Menu</h1>

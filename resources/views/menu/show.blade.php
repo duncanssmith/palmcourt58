@@ -55,7 +55,7 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="active" class="pull-right">Is active?</label>
+                                    <label for="active" class="pull-right">Active?</label>
                                 </div>
                                 <div class="col-9">
                                     @if ($menu->active == 1)
@@ -68,10 +68,23 @@
 
                             <div class="row">
                                 <div class="col-3">
-                                    <label for="function" class="pull-right">Is function?</label>
+                                    <label for="function" class="pull-right">Function?</label>
                                 </div>
                                 <div class="col-9">
                                     @if ($menu->function == 1)
+                                        <i class="fa fa-check text-success"></i>
+                                    @else
+                                        <i class="fa fa-times text-danger"></i>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="banner" class="pull-right">Banner?</label>
+                                </div>
+                                <div class="col-9">
+                                    @if ($menu->banner == 1)
                                         <i class="fa fa-check text-success"></i>
                                     @else
                                         <i class="fa fa-times text-danger"></i>

@@ -17,11 +17,11 @@
 
 
 // Disable registration
-//Auth::routes();
-Auth::routes(['register' => false]);
+Auth::routes();
+//Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::get('/menus', 'HomeController@menus')->name('menus');
+Route::get('/menus', 'HomeController@menus')->name('menu');
 Route::get('/views', 'HomeController@view')->name('view');
 Route::get('/functions', 'HomeController@functions')->name('functions');
 Route::get('/about', 'HomeController@about')->name('about');

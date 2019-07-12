@@ -33,7 +33,13 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('public.welcome', ['welcome' => $welcome, 'opening' => $opening]);
+        $banners = Menu::where([['active', '=', '1'], ['banner', '=', '1']])->get();
+
+        return view('public.welcome', [
+            'welcome' => $welcome,
+            'opening' => $opening,
+            'banners' => $banners,
+        ]);
     }
 
     /**
@@ -43,11 +49,11 @@ class HomeController extends Controller
      */
     public function menus()
     {
-        $menus = Menu::where([['active', '=', '1'], ['function', '=', '0']])
+        $menus = Menu::where([['active', '=', '1'], ['function', '=', '0'], ['banner', '=', '0']])
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('public.menus', ['menus' => $menus]);
+        return view('public.menu', ['menus' => $menus]);
     }
 
     /**

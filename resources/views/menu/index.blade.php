@@ -26,7 +26,8 @@
                                         <th>Title</th>
                                         <th>Description</th>
                                         <th>Active</th>
-                                        <th>Functions info</th>
+                                        <th>Function</th>
+                                        <th>Banner</th>
                                         <th>Hierarchy</th>
                                         <th>Created</th>
                                         <th>Updated</th>
@@ -59,6 +60,13 @@
                                             </td>
                                             <td>
                                                 @if ($menu->function == 1)
+                                                    <i class="fa fa-check text-success"></i>
+                                                @else
+                                                    <i class="fa fa-times text-danger"></i>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                @if ($menu->banner == 1)
                                                     <i class="fa fa-check text-success"></i>
                                                 @else
                                                     <i class="fa fa-times text-danger"></i>

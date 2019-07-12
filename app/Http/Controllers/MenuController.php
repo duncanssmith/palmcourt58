@@ -79,6 +79,7 @@ class MenuController extends Controller
                     $menu->hierarchy = request('hierarchy');
                     $menu->active = request('active') ? 1 : 0;
                     $menu->function = request('function') ? 1 : 0;
+                    $menu->banner = request('banner') ? 1 : 0;
                     $menu->save();
                 }
             }
@@ -145,6 +146,7 @@ class MenuController extends Controller
             $menu->hierarchy = request('hierarchy');
             $menu->active = request('active') ? 1 : 0;
             $menu->function = request('function') ? 1 : 0;
+            $menu->banner = request('banner') ? 1 : 0;
             $menu->save();
         } else {
             return redirect('/menu/update')->withErrors();
@@ -227,7 +229,7 @@ class MenuController extends Controller
 //        $image->save($targetPath.'120/'.$ref.'.jpg');
 //        $image->resize(64, 64);
 //        $image->save($targetPath.'64/'.$ref.'.jpg');
-        $image->save($target.'/'.$ref.'.jpg');
+//        $image->save($target.'/'.$ref.'.jpg');
     }
 
 }
