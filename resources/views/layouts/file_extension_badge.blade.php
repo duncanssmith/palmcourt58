@@ -9,6 +9,9 @@
         @case ('JPG')
         class="badge badge-success"
         @break
+        @case ('jpeg')
+        class="badge badge-success"
+        @break
         @case ('jpg')
         class="badge badge-success"
         @break

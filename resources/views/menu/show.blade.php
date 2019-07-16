@@ -31,7 +31,7 @@
                                     <label for="image" class="pull-right">Image</label>
                                 </div>
                                 <div class="col-9">
-                                    @include('layouts.image_show_field', ['menu' => $menu, 'width' => '100%', 'height' => '1200px'])
+                                    @include('layouts.image_show_field', ['item' => $menu, 'width' => '100%', 'height' => '1200px'])
                                 </div>
                             </div>
 
@@ -40,7 +40,7 @@
                                     <label for="extension" class="pull-right">Extension</label>
                                 </div>
                                 <div class="col-9">
-                                    @include('layouts.file_extension_badge', ['menu' => $menu])
+                                    @include('layouts.file_extension_badge', ['item' => $menu])
                                 </div>
                             </div>
 

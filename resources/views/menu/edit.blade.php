@@ -26,7 +26,7 @@
                                         <label for="image" class="pull-right">Image</label>
                                     </div>
                                     <div class="col-9">
-                                        @include('layouts.image_show_field', ['menu' => $menu, 'width' => '40%', 'height' => '400px'])
+                                        @include('layouts.image_show_field', ['item' => $menu, 'width' => '40%', 'height' => '400px'])
                                     </div>
                                 </div>
 
