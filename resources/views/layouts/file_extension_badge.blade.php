@@ -1,10 +1,13 @@
 <div
-    @switch ($menu->extension)
+    @switch ($item->extension)
         @case ('pdf')
         class="badge badge-danger"
         @break
         @case ('png')
         class="badge badge-info"
+        @break
+        @case ('JPG')
+        class="badge badge-success"
         @break
         @case ('jpg')
         class="badge badge-success"
@@ -14,5 +17,5 @@
         @break
     @endswitch
 >
-    {{ $menu->extension }}
+    {{ $item->extension }}
 </div>

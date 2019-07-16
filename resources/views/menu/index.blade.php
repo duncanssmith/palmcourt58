@@ -40,14 +40,14 @@
                                         <tr>
                                             <td>
                                                 <a href="/menu/{{ $menu->id }}">
-                                                    @include('layouts.image_show_field', ['menu' => $menu, 'width' => '100px', 'height' => '140px'])
+                                                    @include('layouts.image_show_field', ['item' => $menu, 'width' => '100px', 'height' => '140px'])
                                                 </a>
                                             </td>
                                             <td>
                                                 {{ $menu->path }}
                                             </td>
                                             <td>
-                                                @include('layouts.file_extension_badge', ['menu' => $menu])
+                                                @include('layouts.file_extension_badge', ['item' => $menu])
                                             </td>
                                             <td>{{ $menu->title }}</td>
                                             <td>{{ $menu->description }}</td>

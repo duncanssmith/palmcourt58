@@ -12,7 +12,7 @@
         @endfor
     </ol>
     <div class="carousel-inner">
-        @foreach ($elements as $element)
+        @foreach ($elements as $item)
             @if ($loop->first)
                 @php $isActive = 'active'
                 @endphp
@@ -21,7 +21,7 @@
                 @endphp
             @endif
             <div class="carousel-item {{$isActive}}">
-                @include('layouts.image_show_field', ['item' => $element, 'width' => $width, 'height' => $height])
+                @include('layouts.image_show_field', ['item' => $item, 'width' => $width, 'height' => $height])
             </div>
         @endforeach
     </div>
