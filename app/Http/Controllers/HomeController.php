@@ -53,7 +53,11 @@ class HomeController extends Controller
             ->orderBy('hierarchy', 'asc')
             ->get();
 
-        return view('public.menu', ['menus' => $menus]);
+        $menuDocs = Document::where([['active', '=', '1'], ['title', 'like', '%MenuDoc%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
+
+        return view('public.menu', ['menus' => $menus, 'menuDocs' => $menuDocs]);
     }
 
     /**
