@@ -33,15 +33,15 @@
                         <li class="nav-item" style="vertical-align: center;">
                             <a id="nav-login-key" class="nav-link header-link" href="{{ route('login') }}" title="log in"><i class="fa fa-key"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
+                        {{--<li class="nav-item">--}}
+                            {{--<a class="nav-link header-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
+                        {{--</li>--}}
                         <!-- we dont want people to register either - its a read-only site -->
-                         @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
+                        {{-- @if (Route::has('register'))--}}
+                            {{--<li class="nav-item">--}}
+                                {{--<a class="nav-link header-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+                            {{--</li>--}}
+                        {{--@endif--}}
                     @else
                         <li class="nav-item" style="vertical-align: center;">
                             <a id="nav-logout-lock" class="nav-link header-link header-link" href="{{ route('logout') }}"
