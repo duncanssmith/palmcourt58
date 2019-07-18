@@ -5,6 +5,14 @@
         <div class="col-lg-10">
             <h1 class="title">Views</h1>
 
+            <div class="row">
+                <div class="col-12">
+                    @foreach($viewDocs as $viewDoc)
+                        {!! $viewDoc->content !!}
+                    @endforeach
+                </div>
+            </div>
+
             @include('layouts.carousel', ['elements' => $images, 'width' => '100%', 'height' => '100%'])
 
         </div>

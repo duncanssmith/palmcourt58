@@ -67,6 +67,9 @@ class HomeController extends Controller
      */
     public function view()
     {
+        $viewDocs = Document::where([['active', '=', '1'], ['title', 'like', '%ViewDoc%']])
+            ->orderBy('hierarchy', 'asc')
+            ->get();
 
         $images = [
             "media/images/aMainFront-1.jpg",
@@ -78,7 +81,7 @@ class HomeController extends Controller
             "media/images/aInteriorSpace-2.jpg",
         ];
 
-        return view('public.view', ['images' => $images]);
+        return view('public.view', ['images' => $images, 'viewDocs' => $viewDocs]);
     }
 
     /**
