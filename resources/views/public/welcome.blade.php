@@ -12,13 +12,17 @@
                     <div class="row">
                         <div class="col-7">
                             <div class="opening-times">
-                                @foreach($welcome as $wc)
-                                    {!! $wc->content !!}
-                                @endforeach
+                                <div class="float-text">
+                                    @foreach($welcome as $wc)
+                                        {!! $wc->content !!}
+                                    @endforeach
+                                </div>
                                 <h2>Opening times</h2>
-                                @foreach($opening as $op)
-                                    {!! $op->content !!}
-                                @endforeach
+                                <div class="float-text">
+                                    @foreach($opening as $op)
+                                        {!! $op->content !!}
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
 

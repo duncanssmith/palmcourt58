@@ -7,9 +7,11 @@
 
             <h1 class="title">Functions</h1>
 
-                @foreach($documents as $doc)
-                    {!! $doc->content !!}
-                @endforeach
+                <div class="float-text">
+                    @foreach($documents as $doc)
+                        {!! $doc->content !!}
+                    @endforeach
+                </div>
 
                 @if (count($functions) > 0)
                     <div class="row">

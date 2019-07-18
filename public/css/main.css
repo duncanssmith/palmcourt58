@@ -232,21 +232,29 @@ div.float-text-main {
   color: rgba(0, 0, 0, 0.55);
 }
 
-section.photo {
+div.float-text p {
+  text-align: left;
+  margin: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+
+div section.photo {
   background: #b4a014;
 }
 
-section.photo > .container {
+div section.photo > .container {
   background: rgba(255, 255, 255, 0);
   padding: 0;
 }
 
-section.photo > .container > .row {
+div section.photo > .container > .row {
   padding: 0;
   background: rgba(255, 255, 255, 0);
 }
 
-.welcome {
+div .welcome {
   text-align: left;
   width: 300px;
   height: 200px;
@@ -257,33 +265,33 @@ section.photo > .container > .row {
   margin-top: -100px;
 }
 
-a {
+div a {
   text-decoration: none;
 }
 
-a:visited {
+div a:visited {
   text-decoration: none;
 }
 
-a.header-link-hidden {
+div a.header-link-hidden {
   background-color: inherit;
   color: rgba(240, 240, 240, 0.9);
 }
 
-a.header-link-secure {
+div a.header-link-secure {
   color: #c6c !important;
 }
 
-a.header-link {
+div a.header-link {
   color: #666;
 }
 
-a.header-dropdown-link {
+div a.header-dropdown-link {
   font-size: 0.8em;
   color: #666;
 }
 
-.top-photo {
+div .top-photo {
   /*background: #282828 url('') no-repeat top center;*/
   min-height: 285px;
   background-size: cover;

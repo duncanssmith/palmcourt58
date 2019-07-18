@@ -231,62 +231,71 @@ p {
   }
 }
 
-div.float-text-main {
-  text-align: center;
-  margin: 10px;
-  padding: 20px;
-  background: $fullwhite;
-  color: $charcoal;
-}
+div {
+  &.float-text-main {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background: $fullwhite;
+    color: $charcoal;
+  }
+  &.float-text p {
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+    background: $charcoal;
+    color: $fullwhite;
+  }
 
-section.photo {
-  background: rgba(180, 160, 20, 1);
-  > .container {
-    background: $transparent;
-    padding: 0;
-    > .row {
+  section.photo {
+    background: rgba(180, 160, 20, 1);
+    > .container {
+      background: $transparent;
       padding: 0;
-      background:  $transparent;
+      > .row {
+        padding: 0;
+        background:  $transparent;
+      }
     }
   }
-}
 
-.welcome {
-  text-align: left;
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -100px;
-}
+  .welcome {
+    text-align: left;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+  }
 
-a {
-  text-decoration: none;
-  &:visited {
+  a {
     text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &.header-link-hidden {
+      background-color: inherit;
+      color: $opaque;
+    }
+    &.header-link-secure {
+      color: #c6c !important;
+    }
+    &.header-link {
+      color: #666;
+    }
+    &.header-dropdown-link {
+      font-size: 0.8em;
+      color: #666;
+    }
   }
-  &.header-link-hidden {
-    background-color: inherit;
-    color: $opaque;
-  }
-  &.header-link-secure {
-    color: #c6c !important;
-  }
-  &.header-link {
-    color: #666;
-  }
-  &.header-dropdown-link {
-    font-size: 0.8em;
-    color: #666;
-  }
-}
 
-.top-photo {
-  /*background: #282828 url('') no-repeat top center;*/
-  min-height: 285px;
-  background-size: cover;
-  color: $midgrey;
+  .top-photo {
+    /*background: #282828 url('') no-repeat top center;*/
+    min-height: 285px;
+    background-size: cover;
+    color: $midgrey;
+  }
 }
 
