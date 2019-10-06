@@ -28,7 +28,7 @@
 
                         <div class="col-lg-5">
 
-                            @include('layouts.carousel', ['elements' => $banners, 'width' => '600px', 'height' => '800px'])
+                            @include('layouts.carousel', ['elements' => $banners, 'width' => '800px', 'height' => '1100px'])
 
                         </div>
                     </div>
