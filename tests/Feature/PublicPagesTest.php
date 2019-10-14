@@ -4,6 +4,8 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\User;
+
 
 class PublicPagesTest extends TestCase
 {
@@ -30,6 +32,23 @@ class PublicPagesTest extends TestCase
         $response->assertStatus(200);
 
         $response = $this->get('/login');
+        $response->assertStatus(200);
+    }
+
+    public function testSessionTest()
+    {
+        $response = $this->withSession(['foo' => 'bar'])
+                         ->get('/');
+        $response->assertStatus(200);
+    }
+
+    public function testUserTest()
+    {
+        $user = factory(User::class)->create();
+
+        $response = $this->actingAs($user)
+                         ->withSession(['foo' => 'bar'])
+                         ->get('/');
         $response->assertStatus(200);
     }
 }
