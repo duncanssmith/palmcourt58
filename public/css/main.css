@@ -1,0 +1,300 @@
+@import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);html,
+body {
+  background-color: #aacccc;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Nanum Myeongjo", sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.55);
+  display: table;
+}
+
+.container-fluid,
+.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: rgba(110, 110, 110, 0.9);
+  width: inherit;
+}
+
+.content {
+  text-align: center;
+  display: inline-block;
+}
+
+.title {
+  padding: 40px 30px 40px 30px;
+  font-family: "Nanum Myeongjo", sans-serif;
+  font-weight: 100;
+  font-size: 48px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.title-sub {
+  font-size: 38px;
+  color: white;
+  font-weight: 100;
+}
+
+.address {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
+  font-family: "Nanum Myeongjo", sans-serif;
+  font-size: 1.2em;
+  line-height: 170%;
+  font-weight: 200;
+}
+
+.address-email {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
+  font-family: "Nanum Myeongjo", sans-serif;
+  font-size: 1em;
+  line-height: 100%;
+  font-weight: 200;
+}
+
+.opening-times {
+  font-family: "Nanum Myeongjo", sans-serif;
+  font-size: 1.2em;
+  line-height: 170%;
+  font-weight: 200;
+}
+
+.opening-times > p {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(100, 100, 100, 0.9);
+}
+
+.opening-times > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.55);
+  margin: 10px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.google-map-container {
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.secure {
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  min-height: 900px;
+}
+
+#nav-logo {
+  width: 140px;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key:hover {
+  color: rgba(240, 240, 240, 0.9);
+}
+
+#nav-logout-lock {
+  color: white;
+  margin-top: 8px;
+  padding: 0px;
+}
+
+#nav-logout-lock:hover {
+  color: rgba(240, 240, 240, 0.9);
+}
+
+.row.video div {
+  width: inherit;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 60px;
+  padding: 24px;
+}
+
+.selected img {
+  opacity: 0.5;
+}
+
+#page-welcome {
+  background: rgba(255, 255, 255, 0.75) url("/media/images/aMainFront-2.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#page-about {
+  background: rgba(255, 255, 255, 0.75) url("/media/images/gCoffeeMachine.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#page-functions {
+  background: rgba(255, 255, 255, 0.75) url("/media/images/gQuartet.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#page-menu {
+  background: rgba(255, 255, 255, 0.75) url("/media/images/gOffer1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.carousel-container {
+  background: rgba(240, 240, 240, 0.9);
+}
+
+.menu-page-1 {
+  margin: 0 80px 0 0;
+}
+
+.menu-page-2 {
+  margin: 0 0 0 80px;
+}
+
+.top-photo {
+  background: #eee url("/public/media/images/gOffer1.jpg") no-repeat center center;
+  /*background: #282828;*/
+  min-height: 285px;
+  background-size: cover;
+  color: #fff;
+}
+
+.download-box {
+  background: white;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+section.flat {
+  background: rgba(230, 230, 230, 0.6);
+  padding: 0;
+}
+
+section.flat > .container {
+  background: rgba(230, 230, 230, 0.4);
+  padding: 0;
+}
+
+section.flat > .container > .photo-float {
+  padding: 30px 0px 30px 0px;
+  min-height: 285px;
+}
+
+.groupon-logo-style {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: green;
+}
+
+.photo-float {
+  background: #ddd url("/public/media/images/gQuartet.jpg") no-repeat center center;
+}
+
+p.float-text-main {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+
+p.float-text {
+  text-align: left;
+  margin: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+
+div.float-text-main {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background: white;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+div.float-text p {
+  text-align: left;
+  margin: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+}
+
+div section.photo {
+  background: #b4a014;
+}
+
+div section.photo > .container {
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
+}
+
+div section.photo > .container > .row {
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+div .welcome {
+  text-align: left;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+}
+
+div a {
+  text-decoration: none;
+}
+
+div a:visited {
+  text-decoration: none;
+}
+
+div a.header-link-hidden {
+  background-color: inherit;
+  color: rgba(240, 240, 240, 0.9);
+}
+
+div a.header-link-secure {
+  color: #c6c !important;
+}
+
+div a.header-link {
+  color: #666;
+}
+
+div a.header-dropdown-link {
+  font-size: 0.8em;
+  color: #666;
+}
+
+div .top-photo {
+  /*background: #282828 url('') no-repeat top center;*/
+  min-height: 285px;
+  background-size: cover;
+  color: rgba(100, 100, 100, 0.9);
+}
+

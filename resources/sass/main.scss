@@ -1,0 +1,301 @@
+//@import url(//fonts.googleapis.com/css?family=Open%20Sans);
+//@import url(//fonts.googleapis.com/css?family=Lora);
+//@import url(//fonts.googleapis.com/css?family=Oswald);
+//@import url(//fonts.googleapis.com/css?family=Old%20Standard%20TT);
+//@import url(//fonts.googleapis.com/css?family=Sofia);
+@import url(//fonts.googleapis.com/css?family=Nanum%20Myeongjo);
+
+@import "_variables";
+
+html, body {
+  background-color: $duckegg;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+  font-size: 1.0em;
+  font-weight: 200;
+  text-align: left;
+  color: $charcoal;
+  display: table;
+}
+
+.container-fluid, .container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: $battleship;
+  width: inherit;
+}
+
+.content {
+  text-align: center;
+  display: inline-block;
+}
+
+// HEADINGS, TEXT
+.title {
+  padding: 40px 30px 40px 30px;
+  font-family: $font-header;
+  font-weight: 100;
+  font-size: 48px;
+  background-color: $charcoal;
+  color: $clearwhite;
+}
+
+.title-sub {
+  font-size: 38px;
+  color: $fullwhite;
+  font-weight: 100;
+}
+
+.address {
+  color: $fullwhite;
+  background-color: $charcoal;
+  font-family: $font-body;
+  font-size: 1.2em;
+  line-height: 170%;
+  font-weight: 200;
+}
+
+.address-email {
+  color: $fullwhite;
+  background-color: $charcoal;
+  font-family:  $font-body;
+  font-size: 1em;
+  line-height: 100%;
+  font-weight: 200;
+}
+
+.opening-times {
+  font-family: $font-body;
+  font-size: 1.2em;
+  line-height: 170%;
+  font-weight: 200;
+}
+
+.opening-times > p {
+  color: $clearwhite;
+  background-color: $midgrey;
+}
+
+.opening-times > h1,h2,h3,h4,h5,h6 {
+  background-color: $clearwhite;
+  color: $charcoal;
+  margin: 10px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.google-map-container {
+  margin: 10px;
+  padding: 10px;
+  background: $fullwhite;
+  color: $charcoal;
+}
+
+.secure {
+  font-family: $font-secure;
+  position: relative;
+  min-height: 900px;
+}
+
+#nav-logo {
+  width: 140px;
+  background-color: $transparent;
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key {
+  background-color: $transparent;
+  color:  $transparent;
+  margin: 8px;
+  padding: 4px;
+}
+
+#nav-login-key:hover {
+  color: $opaque;
+}
+
+#nav-logout-lock {
+  color: $fullwhite;
+  margin-top: 8px;
+  padding: 0px;
+}
+
+#nav-logout-lock:hover {
+  color: $opaque;
+}
+
+.row.video div {
+  width: inherit;
+  background-color: $clearwhite;
+  margin: 60px;
+  padding: 24px;
+}
+
+.selected img {
+  opacity: 0.5;
+}
+
+#page-welcome {
+  background: $clearwhite url('/media/images/aMainFront-2.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+#page-about {
+  background: $clearwhite url('/media/images/gCoffeeMachine.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+#page-functions {
+  background: $clearwhite url('/media/images/gQuartet.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+//#page-views {
+//  background: $clearwhite url('/media/images/aInteriorSpace-1.jpg') no-repeat center center;
+//  background-size: cover;
+//}
+
+#page-menu {
+  background: $clearwhite url('/media/images/gOffer1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.carousel-container {
+  background: $opaque;
+}
+
+.menu-page-1 {
+  margin: 0 80px 0 0;
+}
+
+.menu-page-2 {
+  margin: 0 0 0 80px;
+}
+
+.top-photo {
+  background: #eee url('/public/media/images/gOffer1.jpg') no-repeat center center;
+  /*background: #282828;*/
+  min-height: 285px;
+  background-size: cover;
+  color: #fff;
+}
+
+.download-box {
+  background: $fullwhite;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+section.flat {
+  background: rgba(230, 230, 230, 0.6);
+  padding: 0;
+  > .container {
+    background: rgba(230, 230, 230, 0.4);
+    padding: 0;
+    > .photo-float {
+      padding: 30px 0px 30px 0px;
+      min-height: 285px;
+    }
+  }
+}
+
+.groupon-logo-style {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: green;
+}
+
+.photo-float {
+  background: #ddd url('/public/media/images/gQuartet.jpg') no-repeat center center;
+}
+
+p {
+  &.float-text-main {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background: $charcoal;
+    color: $fullwhite;
+  }
+  &.float-text {
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+    background: $charcoal;
+    color: $fullwhite;
+  }
+}
+
+div {
+  &.float-text-main {
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background: $fullwhite;
+    color: $charcoal;
+  }
+  &.float-text p {
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
+    background: $charcoal;
+    color: $fullwhite;
+  }
+
+  section.photo {
+    background: rgba(180, 160, 20, 1);
+    > .container {
+      background: $transparent;
+      padding: 0;
+      > .row {
+        padding: 0;
+        background:  $transparent;
+      }
+    }
+  }
+
+  .welcome {
+    text-align: left;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+  }
+
+  a {
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &.header-link-hidden {
+      background-color: inherit;
+      color: $opaque;
+    }
+    &.header-link-secure {
+      color: #c6c !important;
+    }
+    &.header-link {
+      color: #666;
+    }
+    &.header-dropdown-link {
+      font-size: 0.8em;
+      color: #666;
+    }
+  }
+
+  .top-photo {
+    /*background: #282828 url('') no-repeat top center;*/
+    min-height: 285px;
+    background-size: cover;
+    color: $midgrey;
+  }
+}
+

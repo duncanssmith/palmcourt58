@@ -6,9 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    //    // Use this - fields that can be mass assigned
+    const IMAGE_PATH = ('/uploads');
+
+    // Use this - fields that can be mass assigned
     protected $fillable = [
-            'title' ,
-            'description' ,
+        'title' ,
+        'description',
+        'active',
+        'function',
+        'banner',
+        'hierarchy',
     ];
 }

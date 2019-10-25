@@ -11,3 +11,6 @@ npm-debug.log
 yarn-error.log
 readme.md
 README.md
+.idea/*
+.vscode/*
+*.zip
